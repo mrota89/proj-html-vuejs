@@ -1,0 +1,29 @@
+@mixin inner-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin absolute {
+  position: absolute;
+  transform: translate(-50% , -50%);
+  top: 50%;
+  left: 50%;
+}
+
+/*variabili*/
+$white: #fff;
+$min-width: 1000px;
+$jumbotron-image: "../img/course-9-f-img.jpg";
+$width-menu-bar: 600px;
+$width-logo: 200px;
+$width-box-icons: 150px;

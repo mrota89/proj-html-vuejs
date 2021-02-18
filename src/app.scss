@@ -1,0 +1,88 @@
+@import "partials/_commons";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Serif', serif;
+}
+
+.my-header {
+  position: relative;
+  width: 100%;
+  min-width: $min-width;
+  background-image: url($jumbotron-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  .layer {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 800px;
+
+    .container {
+      @include inner-container;
+
+      .navbar {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-logo {
+          img {
+            width: 80%;
+          }
+        }
+
+        &-menu {
+          @include flex-row ;
+          align-items: center;
+          justify-content: space-around;
+          width: $width-menu-bar;
+          height: 100%;
+
+          .menu-element {
+            text-align: center;
+            color: #efefee;
+          }
+        }
+
+        &-icons {
+          @include flex-row;
+          width: $width-box-icons;
+          color: $white;
+          justify-content: space-around;
+        }
+      }
+
+      .jumbotron-text {
+        @include absolute;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        color: $white;
+
+        h1 {
+          font-size: 80px;
+        }
+
+        p {
+          padding: 50px;
+        }
+
+        &-button {
+          width: 200px;
+          height: 50px;
+          background-color: #40c4ff;
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+
+}

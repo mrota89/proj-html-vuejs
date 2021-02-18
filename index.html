@@ -3,14 +3,47 @@
   <head>
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <link rel="stylesheet" href="dist/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="dist/app.css">
     <title>iCademy</title>
   </head>
   <body>
     <div id="app">
+      <header class="my-header">
+        <div class="layer">
+          <!-- contenitore interno -->
+          <div class="container">
+            <nav class="navbar">
+              <div class="navbar-logo">
+                <img src="img/logo-light.png" alt="">
+              </div>
+              <div class="navbar-menu">
+                <div v-for="element in menuNav" class="menu-element">{{element}}</div>
+              </div>
+              <div class="navbar-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-bars"></i>
+              </div>
 
+            </nav>
+
+            <div class="jumbotron-text">
+              <h1>Contemporary Ideas</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="jumbotron-text-button">
+                REGISTER NOW
+              </div>
+              <!-- bottone creare mixin per futuro riutilizzo -->
+            </div>
+          </div>
+          <!-- /contenitore interno -->
+        </div>
+
+      </header>
     </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>

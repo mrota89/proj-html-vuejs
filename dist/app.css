@@ -1,0 +1,79 @@
+/*variabili*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Serif", serif;
+}
+
+.my-header {
+  position: relative;
+  width: 100%;
+  min-width: 1000px;
+  background-image: url("../img/course-9-f-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.my-header .layer {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 800px;
+}
+.my-header .layer .container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.my-header .layer .container .navbar {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-header .layer .container .navbar-logo img {
+  width: 80%;
+}
+.my-header .layer .container .navbar-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+  height: 100%;
+}
+.my-header .layer .container .navbar-menu .menu-element {
+  text-align: center;
+  color: #efefee;
+}
+.my-header .layer .container .navbar-icons {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  color: #fff;
+  justify-content: space-around;
+}
+.my-header .layer .container .jumbotron-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  color: #fff;
+}
+.my-header .layer .container .jumbotron-text h1 {
+  font-size: 80px;
+}
+.my-header .layer .container .jumbotron-text p {
+  padding: 50px;
+}
+.my-header .layer .container .jumbotron-text-button {
+  width: 200px;
+  height: 50px;
+  background-color: #40c4ff;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 50px;
+}
