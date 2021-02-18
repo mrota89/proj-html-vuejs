@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="dist/app.css">
@@ -12,7 +13,7 @@
   </head>
   <body>
     <div id="app">
-      <header class="my-header">
+      <header class="my-header min-width">
         <div class="layer">
           <!-- contenitore interno -->
           <div class="container">
@@ -21,29 +22,52 @@
                 <img src="img/logo-light.png" alt="">
               </div>
               <div class="navbar-menu">
-                <div v-for="element in menuNav" class="menu-element">{{element}}</div>
+                <div v-for="element in menuNav" class="menu-element">
+                  <a href="#">{{element}}</a>
+                </div>
               </div>
               <div class="navbar-icons">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-shopping-bag"></i>
-                <i class="fas fa-bars"></i>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="#"><i class="fas fa-bars"></i></a>
               </div>
-
             </nav>
 
             <div class="jumbotron-text">
               <h1>Contemporary Ideas</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               <div class="jumbotron-text-button">
-                REGISTER NOW
+                <a href="#">REGISTER NOW</a>
               </div>
-              <!-- bottone creare mixin per futuro riutilizzo -->
+            </div>
+
+            <div class="box-circle">
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
             </div>
           </div>
           <!-- /contenitore interno -->
         </div>
-
       </header>
+
+      <main class="my-main min-width">
+        <section class="avalaible-courses">
+          <div v-for="(element, index) in courses" class="single-course">
+            <img :src="imageCourse(index)" alt="">
+            <span>{{element.name}}</span>
+          </div>
+        </section>
+
+        <section class="trusted-name">
+          <h2>The Trusted Name <br> for In-Home Tutoring.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <a href="#"><span>LEARN MORE</span></a>
+        </section>
+      </main>
+
+
+
     </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>

@@ -1,35 +1,46 @@
 @import "partials/_commons";
 
+/*classi utility*/
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Serif', serif;
 }
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.min-width {
+  min-width: $min-width;
+}
+
+a:hover {
+  color: $selected-link;
+}
+/*/classi utility*/
 
 .my-header {
   position: relative;
-  width: 100%;
-  min-width: $min-width;
   background-image: url($jumbotron-image);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center bottom;
 
   .layer {
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 800px;
+    height: 650px;
 
     .container {
       @include inner-container;
 
       .navbar {
+        @include flex-center;
         height: 100px;
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
 
         &-logo {
           img {
@@ -39,50 +50,124 @@
 
         &-menu {
           @include flex-row ;
-          align-items: center;
-          justify-content: space-around;
+          @include flex-center-around;
+          font-family: $font-paragraph;
           width: $width-menu-bar;
           height: 100%;
 
           .menu-element {
             text-align: center;
-            color: #efefee;
+            color: $nav-item;
           }
         }
 
         &-icons {
           @include flex-row;
           width: $width-box-icons;
-          color: $white;
+          color: $nav-item;
           justify-content: space-around;
         }
       }
 
       .jumbotron-text {
         @include absolute;
+        @include flex-column;
+        @include flex-center;
+        text-align: center;
         width: 100%;
         height: 50%;
-        text-align: center;
         color: $white;
 
         h1 {
           font-size: 80px;
+          font-family: $font-title;
         }
 
         p {
-          padding: 50px;
+          padding: 50px 0;
+          line-height: 2;
+          width: 1000px;
+          font-family: $font-paragraph;
         }
 
         &-button {
-          width: 200px;
-          height: 50px;
-          background-color: #40c4ff;
-          display: inline-block;
-          vertical-align: middle;
-          line-height: 50px;
+          @include lightblue-button;
+        }
+      }
+
+      .box-circle {
+        @include absolute;
+        @include flex-row;
+        @include flex-center-around;
+        width: 100px;
+        top: 95%;
+        color: rgba(0, 0, 0, 0.2);
+
+        i {
+          padding: 3px;
+        }
+
+        i:hover {
+          border: solid $selected-link 2px;
+          border-radius: 50%;
+          cursor: pointer;
         }
       }
     }
   }
+}//end header
 
+.my-main {
+
+  section.avalaible-courses {
+    @include inner-container;
+    @include flex-row ;
+    @include flex-start-around;
+    margin-top: 50px;
+    height: 300px;
+
+    .single-course {
+      @include flex-column;
+      @include flex-center;
+      font-family: $font-title;
+      height: 200px;
+      width: 150px;
+
+      img {
+        margin-bottom: 20px;
+        width: 60px;
+      }
+    }
+
+    .single-course:hover {
+      cursor: pointer;
+      background-color: #f2f8fc;
+    }
+  }
+
+  section.trusted-name {
+    @include inner-container;
+    text-align: left;
+    height: 950px;
+    background-image: url($trusted-name-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    h2 {
+      font-family: $font-title;
+      font-size: 45px;
+    }
+
+    p {
+      padding: 30px 0;
+      line-height: 1.5;
+      width: 1000px;
+      font-family: $font-paragraph;
+    }
+
+    span {
+      @include learn-blue;
+    }
+  }
 }

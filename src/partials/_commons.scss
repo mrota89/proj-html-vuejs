@@ -8,10 +8,26 @@
   flex-direction: row;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin flex-center {
   justify-content: center;
   align-items: center;
 }
+
+@mixin flex-center-around {
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-start-around {
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
 
 @mixin absolute {
   position: absolute;
@@ -20,10 +36,29 @@
   left: 50%;
 }
 
+@mixin lightblue-button {
+  width: 200px;
+  height: 50px;
+  background-color: #40c4ff;
+  font-family: $font-paragraph;
+  line-height: 50px;
+}
+
+@mixin learn-blue {
+  color: #52c9ff;
+  font-family: $font-paragraph;
+  font-weight: bold;
+}
+
 /*variabili*/
 $white: #fff;
+$nav-item:  #f6f5f4;
+$selected-link: #3db6ec;
 $min-width: 1000px;
 $jumbotron-image: "../img/course-9-f-img.jpg";
+$trusted-name-image: "../img/h5-img-1.jpg";
 $width-menu-bar: 600px;
 $width-logo: 200px;
-$width-box-icons: 150px;
+$width-box-icons: 100px;
+$font-title: 'PT Serif', serif;
+$font-paragraph: 'Roboto', sans-serif;
