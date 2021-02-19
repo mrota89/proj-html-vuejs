@@ -89,6 +89,7 @@ a:hover {
   line-height: 2;
   width: 1000px;
   font-family: "Roboto", sans-serif;
+  color: #9c9c9c;
 }
 .my-header .layer .container .jumbotron-text-button {
   width: 200px;
@@ -168,6 +169,7 @@ a:hover {
   line-height: 1.5;
   width: 1000px;
   font-family: "Roboto", sans-serif;
+  color: #9c9c9c;
 }
 .my-main section.trusted-name .container span {
   color: #52c9ff;
@@ -210,6 +212,7 @@ a:hover {
 }
 .my-main section.empowering-children .container .text p {
   font-family: "Roboto", sans-serif;
+  color: #9c9c9c;
   line-height: 1.5;
   padding: 30px 0;
 }
@@ -253,7 +256,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 80%;
+  height: 70%;
   text-align: center;
 }
 .my-main section.student-review .review-box p {
@@ -285,4 +288,45 @@ a:hover {
 .my-main section.student-review .review-box .box-circle i:hover {
   color: #fff;
   cursor: pointer;
+}
+.my-main section.learning-possibilities .container {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+}
+.my-main section.learning-possibilities .container .possibilities-choice {
+  height: 60%;
+  width: 25%;
+}
+.my-main section.learning-possibilities .container .possibilities-choice .choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #8b8383;
+  font-weight: bold;
+  height: calc(100% / 6);
+  border: solid #cecece 1px;
+  padding-left: 30px;
+}
+.my-main section.learning-possibilities .container .info-lerning {
+  width: 65%;
+  height: 60%;
+}
+.my-main section.learning-possibilities .container .info-lerning h3 {
+  font-family: "PT Serif", serif;
+  font-size: 40px;
+}
+.my-main section.learning-possibilities .container .info-lerning p {
+  font-family: "Roboto", sans-serif;
+  color: #9c9c9c;
+  line-height: 1.5;
+  padding: 30px 0;
+}
+.my-main section.learning-possibilities .container .info-lerning ul {
+  padding-left: 15px;
 }

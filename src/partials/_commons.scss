@@ -23,6 +23,11 @@
   align-items: center;
 }
 
+@mixin flex-start-center {
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @mixin flex-start-around {
   justify-content: space-around;
   align-items: flex-start;
@@ -63,6 +68,11 @@ $student-opinion-bg: "../img/h5-parallax-img-1.png";
 $white: #fff;
 $nav-item:  #f6f5f4;
 $selected-link: #3db6ec;
+$paragraph-color: #9c9c9c;
+$dark-grey: #8b8383;
+$light-grey: #cecece;
+
+$section-height-600: 600px;
 $min-width: 1000px;
 $width-menu-bar: 600px;
 $width-logo: 200px;

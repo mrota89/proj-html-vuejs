@@ -15,8 +15,8 @@
     <div id="app">
       <header class="my-header min-width">
         <div class="layer">
-          <!-- contenitore interno -->
           <div class="container">
+
             <nav class="navbar">
               <div class="navbar-logo">
                 <img src="img/logo-light.png" alt="">
@@ -35,7 +35,9 @@
 
             <div class="jumbotron-text">
               <h1>Contemporary Ideas</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
               <div class="jumbotron-text-button">
                 <a href="#">REGISTER NOW</a>
               </div>
@@ -47,7 +49,6 @@
               <i class="fas fa-circle"></i>
             </div>
           </div>
-          <!-- /contenitore interno -->
         </div>
       </header>
 
@@ -64,7 +65,9 @@
         <section class="trusted-name min-width">
           <div class="container">
             <h2>The Trusted Name <br> for In-Home Tutoring.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
             <a href="#"><span>LEARN MORE</span></a>
           </div>
         </section>
@@ -76,7 +79,9 @@
             </div>
             <div class="text">
               <h3>Empowering <br> Children To Reach Their Potential.</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
               <div class="numbers">
                 <div class="box-numbers">
                   <span>168</span>
@@ -93,7 +98,6 @@
         </section>
 
         <section class="student-review min-width">
-
           <div class="container">
             <div class="review-box">
               <div class="box-image">
@@ -117,6 +121,32 @@
             </div>
           </div>
         </section>
+
+        <section class="learning-possibilities min-width">
+          <div class="container">
+            <div class="possibilities-choice">
+              <div v-for="choice in possibilitiesChoices" class="choice">
+                {{choice}}
+              </div>
+            </div>
+
+            <div class="info-lerning">
+              <h3>Learning Possibilities</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+
+            <ul>
+              <li>We enrich lives through learning.</li>
+              <li>Maximizing potential through individual attention.</li>
+              <li>The trusted name for specialized training</li>
+              <li>People teach. People learn. This is where they connect.</li>
+            </ul>
+            </div>
+          </div>
+        </section>
+
+
       </main>
     </div>
     <script src="js/script.js" charset="utf-8"></script>

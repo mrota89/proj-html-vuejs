@@ -28,6 +28,15 @@ new Vue({
         name: 'DIY&Craft'
       },
     ],
+
+    possibilitiesChoices: [
+      'What We Do',
+      'Degree Programme',
+      'Career Achievements',
+      'Personal Management',
+      'Steps To Success',
+      'Knowledge Transfer'
+    ],
   },
 
   methods: {
