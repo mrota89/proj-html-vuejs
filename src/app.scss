@@ -23,6 +23,7 @@ a:hover {
 
 .my-header {
   @include background-image;
+  background-size: cover;
   background-image: url($jumbotron-image);
   position: relative;
 
