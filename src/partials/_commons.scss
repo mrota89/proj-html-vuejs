@@ -50,13 +50,20 @@
   font-weight: bold;
 }
 
+@mixin h2-style {
+  font-family: $font-title;
+  font-size: 45px;
+}
+
 /*variabili*/
+$jumbotron-image: "../img/course-9-f-img.jpg";
+$trusted-name-image: "../img/h5-img-1.jpg";
+$student-opinion-bg: "../img/h5-parallax-img-1.png";
+
 $white: #fff;
 $nav-item:  #f6f5f4;
 $selected-link: #3db6ec;
 $min-width: 1000px;
-$jumbotron-image: "../img/course-9-f-img.jpg";
-$trusted-name-image: "../img/h5-img-1.jpg";
 $width-menu-bar: 600px;
 $width-logo: 200px;
 $width-box-icons: 100px;

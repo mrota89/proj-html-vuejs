@@ -149,14 +149,14 @@ a:hover {
     @include inner-container;
     text-align: left;
     height: 950px;
+    border-bottom: 1px solid #ccc;
     background-image: url($trusted-name-image);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
 
     h2 {
-      font-family: $font-title;
-      font-size: 45px;
+      @include h2-style;
     }
 
     p {
@@ -170,4 +170,85 @@ a:hover {
       @include learn-blue;
     }
   }
-}
+
+  section.empowering-children {
+    @include inner-container;
+    @include flex-row;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    height: 600px;
+
+    .children-hand-image {
+      @include absolute;
+      width: 50%;
+      top: 60%;
+      left: 25%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+
+    .text {
+      @include flex-column;
+      padding-top: 10%;
+      text-align: left;
+      width: 40%;
+      height: 100%;
+
+
+      h3 {
+        font-family: $font-title;
+        font-size: 40px;
+      }
+
+      p {
+        font-family: $font-paragraph;
+        line-height: 1.5;
+        padding: 30px 0;
+      }
+
+      .numbers {
+        @include flex-row;
+        width: 80%;
+        justify-content: space-between;
+        font-family: $font-title;
+
+        .box-numbers {
+          @include flex-column;
+          align-items: flex-start;
+          height: 100px;
+          justify-content: space-between;
+          color: $selected-link;
+
+          span:first-child {
+            font-size: 50px;
+          }
+
+          span:nth-child(2) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  section.student-review {
+    position: relative;
+    height: 600px;
+    background-image: url($student-opinion-bg);
+    background-position: top;
+    background-size: cover;
+
+    .review-box {
+      @include absolute;
+      @include flex-column;
+      @include flex-center-around;
+      height: 50%;
+      text-align: center;
+
+    }
+  }
+}//end main
