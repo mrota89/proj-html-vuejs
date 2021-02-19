@@ -22,11 +22,9 @@ a:hover {
 /*/classi utility*/
 
 .my-header {
-  position: relative;
+  @include background-image;
   background-image: url($jumbotron-image);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  position: relative;
 
   .layer {
     background-color: rgba(0, 0, 0, 0.2);
@@ -153,12 +151,10 @@ a:hover {
 
     .container {
       @include inner-container;
+      @include background-image;
+      background-image: url($trusted-name-image);
       text-align: left;
       height: 950px;
-      background-image: url($trusted-name-image);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center bottom;
 
       h2 {
         @include h2-style;
@@ -182,9 +178,8 @@ a:hover {
     .container {
       @include inner-container;
       @include flex-row;
+      @include flex-end-center;
       position: relative;
-      align-items: center;
-      justify-content: flex-end;
       height: $section-height-600;
 
       .children-hand-image {

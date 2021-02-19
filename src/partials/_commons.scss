@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
+@mixin background-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -28,11 +34,15 @@
   align-items: center;
 }
 
+@mixin flex-end-center {
+  justify-content: flex-end;
+  align-items: center;
+}
+
 @mixin flex-start-around {
   justify-content: space-around;
   align-items: flex-start;
 }
-
 
 @mixin absolute {
   position: absolute;

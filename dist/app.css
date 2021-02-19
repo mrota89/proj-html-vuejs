@@ -22,11 +22,11 @@ a:hover {
 
 /*/classi utility*/
 .my-header {
-  position: relative;
-  background-image: url("../img/course-9-f-img.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-image: url("../img/course-9-f-img.jpg");
+  position: relative;
 }
 .my-header .layer {
   background-color: rgba(0, 0, 0, 0.2);
@@ -154,12 +154,12 @@ a:hover {
 .my-main section.trusted-name .container {
   width: 1000px;
   margin: 0 auto;
-  text-align: left;
-  height: 950px;
-  background-image: url("../img/h5-img-1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-image: url("../img/h5-img-1.jpg");
+  text-align: left;
+  height: 950px;
 }
 .my-main section.trusted-name .container h2 {
   font-family: "PT Serif", serif;
@@ -182,9 +182,9 @@ a:hover {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  position: relative;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
+  position: relative;
   height: 600px;
 }
 .my-main section.empowering-children .container .children-hand-image {
