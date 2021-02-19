@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*variabili*/
 /*classi utility*/
 * {
@@ -89,7 +90,7 @@ a:hover {
   line-height: 2;
   width: 1000px;
   font-family: "Roboto", sans-serif;
-  color: #9c9c9c;
+  color: #fff;
 }
 .my-header .layer .container .jumbotron-text-button {
   width: 200px;
@@ -296,10 +297,11 @@ a:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  position: relative;
   height: 600px;
 }
 .my-main section.learning-possibilities .container .possibilities-choice {
-  height: 60%;
+  height: 65%;
   width: 25%;
 }
 .my-main section.learning-possibilities .container .possibilities-choice .choice {
@@ -311,7 +313,12 @@ a:hover {
   font-weight: bold;
   height: calc(100% / 6);
   border: solid #cecece 1px;
-  padding-left: 30px;
+  padding-left: 20px;
+}
+.my-main section.learning-possibilities .container .possibilities-choice .choice:hover {
+  border-left: 8px solid #3db6ec;
+  background-color: #f2f8fc;
+  cursor: pointer;
 }
 .my-main section.learning-possibilities .container .info-lerning {
   width: 65%;
@@ -327,6 +334,29 @@ a:hover {
   line-height: 1.5;
   padding: 30px 0;
 }
-.my-main section.learning-possibilities .container .info-lerning ul {
-  padding-left: 15px;
+.my-main section.learning-possibilities .container .info-lerning ul li {
+  font-family: "Roboto", sans-serif;
+  color: #9c9c9c;
+  margin-bottom: 20px;
+  list-style: none;
+}
+.my-main section.learning-possibilities .container .info-lerning ul li:before {
+  content: "";
+  margin-right: 10px;
+  font-weight: 900;
+  color: #3db6ec;
+  font-size: 70%;
+  font-family: "Font Awesome 5 Free";
+}
+.my-main section.learning-possibilities .container .img-square {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  top: 75%;
+  left: 85%;
+  width: 100px;
+}
+.my-main section.learning-possibilities .container .img-square img {
+  width: 100%;
 }

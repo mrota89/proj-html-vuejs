@@ -88,7 +88,7 @@ a:hover {
           line-height: 2;
           width: 1000px;
           font-family: $font-paragraph;
-          color: $paragraph-color;
+          color: $white;
         }
 
         &-button {
@@ -143,7 +143,7 @@ a:hover {
 
       .single-course:hover {
         cursor: pointer;
-        background-color: #f2f8fc;
+        background-color: $background-hover;
       }
     }
   }
@@ -298,10 +298,11 @@ a:hover {
       @include inner-container;
       @include flex-row;
       @include flex-center-around;
+      position:relative;
       height: $section-height-600;
 
       .possibilities-choice {
-        height: 60%;
+        height: 65%;
         width: 25%;
 
         .choice {
@@ -311,7 +312,14 @@ a:hover {
           font-weight: bold;
           height: calc(100% / 6);
           border: solid $light-grey 1px;
-          padding-left: 30px;
+          padding-left: 20px;
+        }
+
+        .choice:hover {
+          border-left: 8px solid $selected-link;
+          background-color: $background-hover;
+          cursor: pointer;
+
         }
       }
 
@@ -332,7 +340,33 @@ a:hover {
         }
 
         ul {
-          padding-left: 15px;
+
+          li {
+            font-family: $font-paragraph;
+            color: $paragraph-color;
+            margin-bottom: 20px;
+            list-style: none;
+          }
+
+          li:before {
+            content: "\f00c";
+            margin-right: 10px;
+            font-weight: 900;
+            color: $selected-link;
+            font-size: 70%;
+            font-family: "Font Awesome 5 Free";
+          }
+        }
+      }
+
+      .img-square {
+        @include absolute;
+        top: 75%;
+        left: 85%;
+        width: 100px;
+
+        img {
+          width: 100%;
         }
       }
     }
