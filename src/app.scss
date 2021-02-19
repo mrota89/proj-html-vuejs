@@ -120,115 +120,121 @@ a:hover {
 .my-main {
 
   section.avalaible-courses {
-    @include inner-container;
-    @include flex-row ;
-    @include flex-start-around;
-    margin-top: 50px;
-    height: 300px;
+    .container {
+      @include inner-container;
+      @include flex-row ;
+      @include flex-start-around;
+      margin-top: 50px;
+      height: 300px;
 
-    .single-course {
-      @include flex-column;
-      @include flex-center;
-      font-family: $font-title;
-      height: 200px;
-      width: 150px;
+      .single-course {
+        @include flex-column;
+        @include flex-center;
+        font-family: $font-title;
+        height: 200px;
+        width: 150px;
 
-      img {
-        margin-bottom: 20px;
-        width: 60px;
+        img {
+          margin-bottom: 20px;
+          width: 60px;
+        }
       }
-    }
 
-    .single-course:hover {
-      cursor: pointer;
-      background-color: #f2f8fc;
+      .single-course:hover {
+        cursor: pointer;
+        background-color: #f2f8fc;
+      }
     }
   }
 
   section.trusted-name {
-    @include inner-container;
-    text-align: left;
-    height: 950px;
     border-bottom: 1px solid #ccc;
-    background-image: url($trusted-name-image);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center bottom;
 
-    h2 {
-      @include h2-style;
-    }
+    .container {
+      @include inner-container;
+      text-align: left;
+      height: 950px;
+      background-image: url($trusted-name-image);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
 
-    p {
-      padding: 30px 0;
-      line-height: 1.5;
-      width: 1000px;
-      font-family: $font-paragraph;
-    }
+      h2 {
+        @include h2-style;
+      }
 
-    span {
-      @include learn-blue;
+      p {
+        padding: 30px 0;
+        line-height: 1.5;
+        width: 1000px;
+        font-family: $font-paragraph;
+      }
+
+      span {
+        @include learn-blue;
+      }
     }
   }
 
   section.empowering-children {
-    @include inner-container;
-    @include flex-row;
-    position: relative;
-    align-items: center;
-    justify-content: flex-end;
-    height: 600px;
+    .container {
+      @include inner-container;
+      @include flex-row;
+      position: relative;
+      align-items: center;
+      justify-content: flex-end;
+      height: 600px;
 
-    .children-hand-image {
-      @include absolute;
-      width: 50%;
-      top: 60%;
-      left: 25%;
+      .children-hand-image {
+        @include absolute;
+        width: 50%;
+        top: 60%;
+        left: 25%;
 
-      img {
-        width: 100%;
-      }
-    }
-
-
-    .text {
-      @include flex-column;
-      padding-top: 10%;
-      text-align: left;
-      width: 40%;
-      height: 100%;
-
-
-      h3 {
-        font-family: $font-title;
-        font-size: 40px;
+        img {
+          width: 100%;
+        }
       }
 
-      p {
-        font-family: $font-paragraph;
-        line-height: 1.5;
-        padding: 30px 0;
-      }
+      .text {
+        @include flex-column;
+        padding-top: 10%;
+        text-align: left;
+        width: 40%;
+        height: 100%;
 
-      .numbers {
-        @include flex-row;
-        width: 80%;
-        justify-content: space-between;
-        font-family: $font-title;
 
-        .box-numbers {
-          @include flex-column;
-          align-items: flex-start;
-          height: 100px;
+        h3 {
+          font-family: $font-title;
+          font-size: 40px;
+        }
+
+        p {
+          font-family: $font-paragraph;
+          line-height: 1.5;
+          padding: 30px 0;
+        }
+
+        .numbers {
+          @include flex-row;
+          width: 80%;
           justify-content: space-between;
-          color: $selected-link;
+          font-family: $font-title;
 
-          span:first-child {
-            font-size: 50px;
-          }
+          .box-numbers {
+            @include flex-column;
+            align-items: flex-start;
+            height: 100px;
+            justify-content: space-between;
+            color: $selected-link;
 
-          span:nth-child(2) {
-            font-size: 20px;
+            span:first-child {
+              font-size: 50px;
+            }
+
+            span:nth-child(2) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -236,6 +242,7 @@ a:hover {
   }
 
   section.student-review {
+    color: $white;
     position: relative;
     height: 600px;
     background-image: url($student-opinion-bg);
@@ -243,12 +250,43 @@ a:hover {
     background-size: cover;
 
     .review-box {
+      @include inner-container;
       @include absolute;
       @include flex-column;
       @include flex-center-around;
-      height: 50%;
+      height: 80%;
       text-align: center;
 
+      p {
+        padding: 0 50px;
+        line-height: 1.5;
+        font-family: $font-paragraph;
+      }
+
+      .name-student {
+        @include flex-column;
+        @include flex-center-around;
+        height: 50px;
+
+        span {
+          font-size: 20px;
+          font-family: $font-title;
+          margin-bottom: 5px;
+        }
+      }
+
+      .box-circle {
+        @include flex-row;
+        @include flex-center-around;
+        width: 70px;
+        font-size: 15px;
+        color: rgba(256, 256, 256, 0.2);
+
+        i:hover {
+          color: $white;
+          cursor: pointer;
+        }
+      }
     }
   }
 }//end main

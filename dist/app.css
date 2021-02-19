@@ -119,7 +119,7 @@ a:hover {
   cursor: pointer;
 }
 
-.my-main section.avalaible-courses {
+.my-main section.avalaible-courses .container {
   width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -129,7 +129,7 @@ a:hover {
   margin-top: 50px;
   height: 300px;
 }
-.my-main section.avalaible-courses .single-course {
+.my-main section.avalaible-courses .container .single-course {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,41 +138,43 @@ a:hover {
   height: 200px;
   width: 150px;
 }
-.my-main section.avalaible-courses .single-course img {
+.my-main section.avalaible-courses .container .single-course img {
   margin-bottom: 20px;
   width: 60px;
 }
-.my-main section.avalaible-courses .single-course:hover {
+.my-main section.avalaible-courses .container .single-course:hover {
   cursor: pointer;
   background-color: #f2f8fc;
 }
 .my-main section.trusted-name {
+  border-bottom: 1px solid #ccc;
+}
+.my-main section.trusted-name .container {
   width: 1000px;
   margin: 0 auto;
   text-align: left;
   height: 950px;
-  border-bottom: 1px solid #ccc;
   background-image: url("../img/h5-img-1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-.my-main section.trusted-name h2 {
+.my-main section.trusted-name .container h2 {
   font-family: "PT Serif", serif;
   font-size: 45px;
 }
-.my-main section.trusted-name p {
+.my-main section.trusted-name .container p {
   padding: 30px 0;
   line-height: 1.5;
   width: 1000px;
   font-family: "Roboto", sans-serif;
 }
-.my-main section.trusted-name span {
+.my-main section.trusted-name .container span {
   color: #52c9ff;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-.my-main section.empowering-children {
+.my-main section.empowering-children .container {
   width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -182,7 +184,7 @@ a:hover {
   justify-content: flex-end;
   height: 600px;
 }
-.my-main section.empowering-children .children-hand-image {
+.my-main section.empowering-children .container .children-hand-image {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -191,10 +193,10 @@ a:hover {
   top: 60%;
   left: 25%;
 }
-.my-main section.empowering-children .children-hand-image img {
+.my-main section.empowering-children .container .children-hand-image img {
   width: 100%;
 }
-.my-main section.empowering-children .text {
+.my-main section.empowering-children .container .text {
   display: flex;
   flex-direction: column;
   padding-top: 10%;
@@ -202,23 +204,23 @@ a:hover {
   width: 40%;
   height: 100%;
 }
-.my-main section.empowering-children .text h3 {
+.my-main section.empowering-children .container .text h3 {
   font-family: "PT Serif", serif;
   font-size: 40px;
 }
-.my-main section.empowering-children .text p {
+.my-main section.empowering-children .container .text p {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
   padding: 30px 0;
 }
-.my-main section.empowering-children .text .numbers {
+.my-main section.empowering-children .container .text .numbers {
   display: flex;
   flex-direction: row;
   width: 80%;
   justify-content: space-between;
   font-family: "PT Serif", serif;
 }
-.my-main section.empowering-children .text .numbers .box-numbers {
+.my-main section.empowering-children .container .text .numbers .box-numbers {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -226,13 +228,14 @@ a:hover {
   justify-content: space-between;
   color: #3db6ec;
 }
-.my-main section.empowering-children .text .numbers .box-numbers span:first-child {
+.my-main section.empowering-children .container .text .numbers .box-numbers span:first-child {
   font-size: 50px;
 }
-.my-main section.empowering-children .text .numbers .box-numbers span:nth-child(2) {
+.my-main section.empowering-children .container .text .numbers .box-numbers span:nth-child(2) {
   font-size: 20px;
 }
 .my-main section.student-review {
+  color: #fff;
   position: relative;
   height: 600px;
   background-image: url("../img/h5-parallax-img-1.png");
@@ -240,6 +243,8 @@ a:hover {
   background-size: cover;
 }
 .my-main section.student-review .review-box {
+  width: 1000px;
+  margin: 0 auto;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -248,6 +253,36 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 50%;
+  height: 80%;
   text-align: center;
+}
+.my-main section.student-review .review-box p {
+  padding: 0 50px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+.my-main section.student-review .review-box .name-student {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.my-main section.student-review .review-box .name-student span {
+  font-size: 20px;
+  font-family: "PT Serif", serif;
+  margin-bottom: 5px;
+}
+.my-main section.student-review .review-box .box-circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.2);
+}
+.my-main section.student-review .review-box .box-circle i:hover {
+  color: #fff;
+  cursor: pointer;
 }

@@ -51,64 +51,73 @@
         </div>
       </header>
 
-      <main class="my-main min-width">
-        <section class="avalaible-courses">
-          <div v-for="(element, index) in courses" class="single-course">
-            <img :src="imageCourse(index)" alt="">
-            <span>{{element.name}}</span>
+      <main class="my-main">
+        <section class="avalaible-courses min-width">
+          <div class="container">
+            <div v-for="(element, index) in courses" class="single-course">
+              <img :src="imageCourse(index)" alt="">
+              <span>{{element.name}}</span>
+            </div>
           </div>
         </section>
 
-        <section class="trusted-name">
-          <h2>The Trusted Name <br> for In-Home Tutoring.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-          <a href="#"><span>LEARN MORE</span></a>
+        <section class="trusted-name min-width">
+          <div class="container">
+            <h2>The Trusted Name <br> for In-Home Tutoring.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <a href="#"><span>LEARN MORE</span></a>
+          </div>
         </section>
 
-        <section class="empowering-children">
-          <div class="children-hand-image">
-            <img src="img/h5-img-2.jpg" alt="">
+        <section class="empowering-children min-width">
+          <div class="container">
+            <div class="children-hand-image">
+              <img src="img/h5-img-2.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>Empowering <br> Children To Reach Their Potential.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="numbers">
+                <div class="box-numbers">
+                  <span>168</span>
+                  <span>User Stories</span>
+                </div>
+
+                <div class="box-numbers">
+                  <span>347</span>
+                  <span>Events</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="text">
-            <h3>Empowering <br> Children To Reach Their Potential.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div class="numbers">
-              <div class="box-numbers">
-                <span>168</span>
-                <span>User Stories</span>
+        </section>
+
+        <section class="student-review min-width">
+
+          <div class="container">
+            <div class="review-box">
+              <div class="box-image">
+                <img src="img/testimonials-standard-2.png" alt="">
               </div>
 
-              <div class="box-numbers">
-                <span>347</span>
-                <span>Events</span>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              </p>
+
+              <div class="name-student">
+                <span>Joan Collins</span>
+                <small>STUDENT</small>
+              </div>
+
+              <div class="box-circle">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
               </div>
             </div>
           </div>
-        </section>
-
-        <section class="student-review">
-          <div class="review-box">
-            <div class="box-image">
-              <img src="img/testimonials-standard-2.png" alt="">
-            </div>
-
-            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-
-            <span>Joan Collins</span>
-            <span>STUDENT</span>
-
-            <div class="box-circle">
-              <i class="fas fa-circle"></i>
-              <i class="fas fa-circle"></i>
-              <i class="fas fa-circle"></i>
-            </div>
-          </div>
-
         </section>
       </main>
-
-
-
     </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
