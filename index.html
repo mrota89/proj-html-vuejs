@@ -1,157 +1,157 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="dist/app.css">
-    <title>iAcademy</title>
-  </head>
-  <body>
-    <div id="app">
-      <header class="my-header min-width">
-        <div class="layer">
-          <div class="container">
 
-            <nav class="navbar">
-              <div class="navbar-logo">
-                <img src="img/logo-light.png" alt="">
-              </div>
-              <div class="navbar-menu">
-                <div v-for="element in menuNav" class="menu-element">
-                  <a href="#">{{element}}</a>
-                </div>
-              </div>
-              <div class="navbar-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
-                <a href="#"><i class="fas fa-bars"></i></a>
-              </div>
-            </nav>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="dist/app.css">
+  <title>iAcademy</title>
+</head>
 
-            <div class="jumbotron-text">
-              <h1>Contemporary Ideas</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <div class="jumbotron-text-button">
-                <a href="#">REGISTER NOW</a>
+<body>
+  <div id="app">
+    <header class="my-header min-width">
+      <div class="jumbo-img-box">
+        <img :src="imageJumbo()" alt="">
+      </div>
+      <div class="layer">
+        <div class="container">
+
+          <nav class="navbar">
+            <div class="navbar-logo">
+              <img src="img/logo-light.png" alt="">
+            </div>
+            <div class="navbar-menu">
+              <div v-for="element in menuNav" class="menu-element">
+                <a href="#">{{element}}</a>
               </div>
             </div>
+            <div class="navbar-icons">
+              <a href="#"><i class="fas fa-search"></i></a>
+              <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              <a href="#"><i class="fas fa-bars"></i></a>
+            </div>
+          </nav>
 
-            <div class="box-circle">
-              <i class="fas fa-circle"></i>
-              <i class="fas fa-circle"></i>
-              <i class="fas fa-circle"></i>
+          <div v-for="(element, index) in textJumbotron" v-if="index === jumboIDX" class="jumbotron-text">
+            <h1>{{element.title}}</h1>
+            <p>
+              {{element.text}}
+            </p>
+            <div class="jumbotron-text-button">
+              <a href="#">{{element.textButton}}</a>
+            </div>
+          </div>
+
+          <div class="box-circle">
+            <i v-for="(element, index) in textJumbotron" @click="clickPallino(index, jumboIDX)" :class="coloraPallino(index, jumboIDX)"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="my-main">
+      <section class="avalaible-courses min-width">
+        <div class="container">
+          <div v-for="(element, index) in courses" class="single-course">
+            <img :src="imageCourse(index)" alt="">
+            <span>{{element.name}}</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="trusted-name min-width">
+        <div class="container">
+          <h2>The Trusted Name <br> for In-Home Tutoring.</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+          <a href="#"><span>LEARN MORE</span></a>
+        </div>
+      </section>
+
+      <section class="empowering-children min-width">
+        <div class="container">
+          <div class="children-hand-image">
+            <img src="img/h5-img-2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Empowering <br> Children To Reach Their Potential.</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="numbers">
+              <div class="box-numbers">
+                <span>168</span>
+                <span>User Stories</span>
+              </div>
+
+              <div class="box-numbers">
+                <span>347</span>
+                <span>Events</span>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <main class="my-main">
-        <section class="avalaible-courses min-width">
-          <div class="container">
-            <div v-for="(element, index) in courses" class="single-course">
-              <img :src="imageCourse(index)" alt="">
-              <span>{{element.name}}</span>
+      <section class="student-review min-width">
+        <div class="container">
+          <div v-for="(element, index) in studentsReview" v-if="index === studentReviewIDX" class="review-box">
+            <div class="box-image">
+              <img :src="imageStudent()" alt="">
             </div>
-          </div>
-        </section>
 
-        <section class="trusted-name min-width">
-          <div class="container">
-            <h2>The Trusted Name <br> for In-Home Tutoring.</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              {{element.review}}
             </p>
-            <a href="#"><span>LEARN MORE</span></a>
-          </div>
-        </section>
 
-        <section class="empowering-children min-width">
-          <div class="container">
-            <div class="children-hand-image">
-              <img src="img/h5-img-2.jpg" alt="">
+            <div class="name-student">
+              <span>{{element.name}}</span>
+              <small>{{element.grade}}</small>
             </div>
-            <div class="text">
-              <h3>Empowering <br> Children To Reach Their Potential.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <div class="numbers">
-                <div class="box-numbers">
-                  <span>168</span>
-                  <span>User Stories</span>
-                </div>
 
-                <div class="box-numbers">
-                  <span>347</span>
-                  <span>Events</span>
-                </div>
-              </div>
+            <div class="box-circle">
+              <i v-for="(element, index) in studentsReview" @click="clickPallino(index, studentReviewIDX)" :class="coloraPallino(index, studentReviewIDX)"></i>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="student-review min-width">
-          <div class="container">
-            <div class="review-box">
-              <div class="box-image">
-                <img src="img/testimonials-standard-2.png" alt="">
-              </div>
-
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-              </p>
-
-              <div class="name-student">
-                <span>Joan Collins</span>
-                <small>STUDENT</small>
-              </div>
-
-              <div class="box-circle">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-              </div>
+      <section class="learning-possibilities min-width">
+        <div class="container">
+          <div class="possibilities-choice">
+            <div v-for="(choice, index) in possibilitiesChoices" @click="changeTab(index)" :class="classTab(index)">
+              {{choice.tabName}}
             </div>
           </div>
-        </section>
 
-        <section class="learning-possibilities min-width">
-          <div class="container">
-            <div class="possibilities-choice">
-              <div v-for="choice in possibilitiesChoices" class="choice">
-                {{choice}}
-              </div>
-            </div>
-
-            <div class="info-lerning">
-              <h3>Learning Possibilities</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
+          <div v-for="(choice, index) in possibilitiesChoices" class="info-lerning">
+            <h3>{{choice.title}}</h3>
+            <p>
+              {{choice.desciption}}
+            </p>
 
             <ul>
-              <li>We enrich lives through learning.</li>
-              <li>Maximizing potential through individual attention.</li>
-              <li>The trusted name for specialized training</li>
-              <li>People teach. People learn. This is where they connect.</li>
+              <li v-for="(item, index) in possibilitiesChoices[choiceLearningIDX].listItem">
+                {{item}}
+              </li>
             </ul>
-            </div>
-
-            <div class="img-square">
-              <img src="img/h12-tabs-icon-1.png" alt="">
-            </div>
           </div>
-        </section>
 
-      </main>
-    </div>
-    <script src="js/script.js" charset="utf-8"></script>
-  </body>
+          <div class="img-square">
+            <img src="img/h12-tabs-icon-1.png" alt="">
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+
 </html>
