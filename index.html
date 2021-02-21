@@ -48,7 +48,9 @@
           </div>
 
           <div class="box-circle">
-            <i v-for="(element, index) in textJumbotron" @click="clickPallino(index, jumboIDX)" :class="coloraPallino(index, jumboIDX)"></i>
+            <i v-for="(element, index) in textJumbotron" @click="jumboIDX = index"
+            :class="coloraPallino(index, jumboIDX)"></i>
+
           </div>
         </div>
       </div>
@@ -101,7 +103,9 @@
 
       <section class="student-review min-width">
         <div class="container">
-          <div v-for="(element, index) in studentsReview" v-if="index === studentReviewIDX" class="review-box">
+          <div v-for="(element, index) in studentsReview"
+          v-if="index === studentReviewIDX" class="review-box">
+
             <div class="box-image">
               <img :src="imageStudent()" alt="">
             </div>
@@ -116,7 +120,8 @@
             </div>
 
             <div class="box-circle">
-              <i v-for="(element, index) in studentsReview" @click="clickPallino(index, studentReviewIDX)" :class="coloraPallino(index, studentReviewIDX)"></i>
+              <i v-for="(element, index) in studentsReview"
+              @click="studentReviewIDX = index" :class="coloraPallino(index, studentReviewIDX)"></i>
             </div>
           </div>
         </div>
@@ -125,15 +130,17 @@
       <section class="learning-possibilities min-width">
         <div class="container">
           <div class="possibilities-choice">
-            <div v-for="(choice, index) in possibilitiesChoices" @click="changeTab(index)" :class="classTab(index)">
+            <div v-for="(choice, index) in possibilitiesChoices"  @click="choiceLearningIDX = index" :class="classTab(index)">
               {{choice.tabName}}
             </div>
           </div>
 
-          <div v-for="(choice, index) in possibilitiesChoices" class="info-lerning">
+          <div v-for="(choice, index) in possibilitiesChoices"
+          v-if="index === choiceLearningIDX" class="info-lerning">
+
             <h3>{{choice.title}}</h3>
             <p>
-              {{choice.desciption}}
+              {{choice.description}}
             </p>
 
             <ul>
@@ -144,9 +151,45 @@
           </div>
 
           <div class="img-square">
-            <img src="img/h12-tabs-icon-1.png" alt="">
+            <img :src="imagePossChoice()" alt="">
           </div>
         </div>
+      </section>
+
+      <section class="popular-courses min-width">
+        <div class="container">
+          <div class="intestazione">
+            <h2>Popular Online Courses</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <div v-for="(element, index) in popularCourses[coursesIDX].arrayCourses" class="blocco-corso">
+            <div class="box-img">
+              <img :src="imagePopularCourses(index)" alt="">
+            </div>
+
+            <div class="info-course one">
+              <span>{{element.name}}</span>
+              <span>{{element.price}}</span>
+              <div class="teacher">
+                {{element.teacher}}
+              </div>
+            </div>
+
+            <p class="info-course two">
+              {{element.description}}
+            </p>
+
+            <div class="info-course three">
+              <i></i>
+              <span>{{element.placeAvailable}}</span>
+              <i></i>
+              <span>{{element.typeOfCourse}}</span>
+            </div>
+          </div>
+
+        </div>
+
       </section>
 
     </main>

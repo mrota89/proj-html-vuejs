@@ -4,6 +4,7 @@ new Vue({
     jumboIDX: 0,
     studentReviewIDX: 0,
     choiceLearningIDX: 0,
+    coursesIDX: 0,
     menuNav:['HOME', 'COURSES', 'INSTRUCTORS', 'EVENTS', 'PAGES', 'ELEMENTS'],
     textJumbotron: [
       {
@@ -83,7 +84,8 @@ new Vue({
           'Maximizing potential through individual attention.',
           'The trusted name for specialized training.',
           'People teach. People learn. This is where they connect.'
-        ]
+        ],
+        imgPath: '-4'
       },
       {
         tabName: 'Degree Programme',
@@ -94,7 +96,8 @@ new Vue({
           'Duis aute irure dolor in reprehenderit.',
           'Esse cillum dolore eu fugiat nulla pariatur.',
           'Fugiat nulla pariatur lorem ipsum dolor sit amet ullamco.',
-        ]
+        ],
+        imgPath: '-1'
       },
       {
         tabName: 'Career Achievements',
@@ -107,7 +110,8 @@ new Vue({
           'Adipisicing elit, sed do eiusmod tempor incididunt ut labore.',
           'Incididunt ut labore et dolore magna aliqua.',
           'Ipsum dolor sit amet.'
-        ]
+        ],
+        imgPath: '-2'
       },
       {
         tabName: 'Personal Management',
@@ -117,7 +121,8 @@ new Vue({
         listItem: [
           'Duis aute irure dolor in reprehenderit.',
           'Esse cillum dolore eu fugiat nulla pariatur.'
-        ]
+        ],
+        imgPath: '-3'
       },
       {
         tabName: 'Steps To Success',
@@ -129,7 +134,8 @@ new Vue({
           'Duis aute irure dolor in reprehenderit in voluptate.',
           'Adipisicing elit, sed do eiusmod tempor incididunt ut labore.',
           'Duis aute irure dolor in reprehenderit.'
-        ]
+        ],
+        imgPath: '-5'
       },
       {
         tabName: 'Knowledge Transfer',
@@ -140,6 +146,105 @@ new Vue({
           'Fugiat nulla pariatur lorem ipsum dolor sit amet ullamco.',
           'Duis aute irure dolor in reprehenderit.',
           'Esse cillum dolore eu fugiat nulla pariatur.',
+        ],
+        imgPath: '-6'
+      },
+    ],
+
+    popularCourses: [
+      {
+        arrayCourses: [
+          {
+          img: '5',
+          name: 'Android Developer',
+          teacher: 'David Sanders',
+          price: 'FREE',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          placeAvailable: '1',
+          typeOfCourse: 'PROGRAMMING',
+          },
+          {
+            img: '6',
+            name: 'Web Designing',
+            teacher: 'Jennifer Powell',
+            price: 'FREE',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'PROGRAMMING',
+          },
+          {
+            img: '12',
+            name: 'Financial Modelling',
+            teacher: 'David Sanders',
+            price: '$20',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'BUSINESS',
+          }
+        ]
+      },
+
+      {
+        arrayCourses: [
+          {
+            img: '2',
+            name: 'Business English',
+            teacher: 'Preston Marshall',
+            price: '30$',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'LANGUAGES',
+          },
+          {
+            img: '7',
+            name: 'Social Computing',
+            teacher: 'David Sanders',
+            price: 'FREE',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'PROGRAMMING',
+          },
+          {
+            img: '11',
+            name: 'Learn Spanish',
+            teacher: 'Jennifer King',
+            price: '30$',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'LANGUAGES',
+          }
+        ]
+      },
+
+      {
+        arrayCourses: [
+          {
+            img: '1',
+            name: 'Basic Marketing',
+            teacher: 'Edward Woodman',
+            price: '20$',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'PROGRAMMING',
+          },
+          {
+            img:'3',
+            name: 'Academic English',
+            teacher: 'John Doe',
+            price: 'FREE',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'LANGUAGES',
+          },
+          {
+            img: '9',
+            name: 'Economics of financial markets',
+            teacher: 'Mario Draghi',
+            price: '30$',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            placeAvailable: '1',
+            typeOfCourse: 'BUSINESS',
+          },
         ]
       },
     ],
@@ -152,37 +257,37 @@ new Vue({
       return imageString;
     },
 
-    imageCourse: function(index) {
-      const icon = this.courses[index].icon;
-      const imageString = `img/h5-custom-icon${icon}.png`;
-      return imageString;
-    },
-
     imageStudent: function() {
       const icon = this.studentsReview[this.studentReviewIDX].studentImg;
       const imageString = `img/testimonials-standard-${icon}.png`;
       return imageString;
     },
 
-    changeTab: function(index) {
-      this.choiceLearningIDX = index;
+    imagePossChoice: function() {
+      const icon = this.possibilitiesChoices[this.choiceLearningIDX].imgPath;
+      const imageString = `img/h3-custom-icon${icon}.png`;
+      return imageString;
+    },
+
+    imagePopularCourses: function(index) {
+      const icon = this.popularCourses[this.coursesIDX].arrayCourses[index].img;
+      const imageString = `img/course-${icon}-f-img.jpg`;
+      return imageString;
+    },
+
+    imageCourse: function(index) {
+      const icon = this.courses[index].icon;
+      const imageString = `img/h5-custom-icon${icon}.png`;
+      return imageString;
     },
 
     classTab: function(index) {
       if (index === this.choiceLearningIDX) {
-        return 'choice active';
+        return 'choice selected';
       } else {
         return 'choice';
       }
     },
-
-    // clickPallino: (index, idx) => {
-    //   if(idx === 'studentReviewIDX') {
-    //     return this.studentReviewIDX = index;
-    //   } else {
-    //     return this.jumboIDX = index;
-    //   }
-    // },
 
     coloraPallino: function(index, idx) {
       if(index === idx) {
@@ -192,7 +297,6 @@ new Vue({
       }
     }
   }
-
 });//end vue app
 
 Vue.config.devtools = true;

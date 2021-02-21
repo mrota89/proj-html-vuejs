@@ -27,12 +27,11 @@ a:hover {
   background-position: center bottom;
   position: relative;
   background-size: cover;
-  background-image: url("../img/course-9-f-img.jpg");
   position: relative;
 }
 .my-header .jumbo-img-box {
   width: 100%;
-  height: 650px;
+  height: 900px;
   overflow: hidden;
 }
 .my-header .jumbo-img-box img {
@@ -45,7 +44,7 @@ a:hover {
   left: 50%;
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 650px;
+  height: 900px;
 }
 .my-header .layer .container {
   width: 1000px;
@@ -309,6 +308,9 @@ a:hover {
   color: #fff;
   cursor: pointer;
 }
+.my-main section.learning-possibilities {
+  border-bottom: 1px solid #ccc;
+}
 .my-main section.learning-possibilities .container {
   width: 1000px;
   margin: 0 auto;
@@ -382,4 +384,40 @@ a:hover {
 }
 .my-main section.learning-possibilities .container .img-square img {
   width: 100%;
+}
+.my-main section.popular-courses {
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.my-main section.popular-courses .container {
+  width: 1000px;
+  margin: 0 auto;
+  height: 70%;
+  background-image: url("../img/page-background-img.png");
+  background-repeat: repeat-y;
+}
+.my-main section.popular-courses .container .intestazione {
+  text-align: center;
+}
+.my-main section.popular-courses .container .intestazione h2 {
+  font-family: "PT Serif", serif;
+  font-size: 45px;
+}
+.my-main section.popular-courses .container .intestazione p {
+  padding: 30px 0;
+  line-height: 1.5;
+  width: 1000px;
+  font-family: "Roboto", sans-serif;
+  color: #9c9c9c;
+}
+.my-main section.popular-courses .container .blocco-corso {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 80%;
+  width: 300px;
 }
