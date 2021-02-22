@@ -386,18 +386,22 @@ a:hover {
   width: 100%;
 }
 .my-main section.popular-courses {
-  height: 600px;
+  height: 700px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 .my-main section.popular-courses .container {
   width: 1000px;
   margin: 0 auto;
-  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   background-image: url("../img/page-background-img.png");
-  background-repeat: repeat-y;
 }
 .my-main section.popular-courses .container .intestazione {
   text-align: center;
@@ -414,12 +418,13 @@ a:hover {
   color: #9c9c9c;
 }
 .my-main section.popular-courses .container .slider-container {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso {
   display: flex;
@@ -428,6 +433,10 @@ a:hover {
   align-items: flex-start;
   height: 100%;
   width: calc(100% / 3);
+  font-family: "Roboto", sans-serif;
+  color: #9c9c9c;
+  font-size: 15px;
+  background-color: #fff;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso .box-img {
   width: 100%;
@@ -443,14 +452,53 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  color: #fff;
 }
-.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one .price-free {
-  background-color: #40c4ff;
+.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one .course-title {
+  font-family: "PT Serif", serif;
+  font-weight: bold;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one .price {
+  background-color: #40c4ff;
+  color: #fff;
+  text-align: center;
+  width: 50px;
+  border-radius: 20px;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one .price.free {
   background-color: #ffd740;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one, .my-main section.popular-courses .container .slider-container .blocco-corso .two, .my-main section.popular-courses .container .slider-container .blocco-corso .three {
+  padding: 0 5px;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .teacher {
+  padding-left: 5px;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso p {
+  line-height: 1.5;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.three i, .my-main section.popular-courses .container .slider-container .blocco-corso .info-course.three span {
+  padding-right: 5px;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso:nth-child(2) {
   margin: 0 30px;
+}
+.my-main section.popular-courses .container .box-circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+.my-main section.popular-courses .container .box-circle i {
+  padding: 5px;
+  font-size: 10px;
+  color: #9ce0ff;
+}
+.my-main section.popular-courses .container .box-circle i.active {
+  color: #3db6ec;
+}
+.my-main section.popular-courses .container .box-circle i:hover {
+  cursor: pointer;
+  color: #3db6ec;
 }

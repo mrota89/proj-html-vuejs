@@ -170,8 +170,8 @@
               </div>
 
               <div class="info-course one">
-                <div>{{element.name}}</div>
-                <div v-if="element.price === 'FREE'" class="price-free">{{element.price}}</div>
+                <div class="course-title">{{element.name}}</div>
+                <div v-if="element.price === 'FREE'" class="price free">{{element.price}}</div>
                 <div v-if="element.price !== 'FREE'"class="price">{{element.price}}</div>
               </div>
 

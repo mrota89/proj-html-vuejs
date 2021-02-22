@@ -394,15 +394,17 @@ a:hover {
   }
 
   section.popular-courses {
-    height: $section-height-600;
+    height: 700px;
     @include flex-row;
     @include flex-center;
+    border-bottom: 1px solid #ccc;
 
     .container {
       @include inner-container;
-      height: 70%;
+      @include flex-column;
+      @include flex-center;
+      height: 100%;
       background-image: url("../img/page-background-img.png");
-      background-repeat: repeat-y;
 
       .intestazione {
         text-align: center;
@@ -421,16 +423,21 @@ a:hover {
       }
 
       .slider-container {
-        width: 100%;
-        height: 100%;
         @include flex-row;
         @include flex-center-around;
+        margin-top: 50px;
+        width: 100%;
+        height: 400px;
 
         .blocco-corso {
           @include flex-column;
           @include flex-start-around;
           height: 100%;
           width: calc(100% / 3);
+          font-family: $font-paragraph;
+          color: $paragraph-color;
+          font-size: 15px;
+          background-color: $white;
 
           .box-img {
             width: 100%;
@@ -446,14 +453,40 @@ a:hover {
             @include flex-row;
             @include between-center;
             width: 100%;
-            color: $white;
 
-            .price-free {
-              background-color: #40c4ff;
+            .course-title {
+              font-family: $font-title;
+              font-weight: bold;
             }
 
             .price {
+              background-color: #40c4ff;
+              color: $white;
+              text-align: center;
+              width: 50px;
+              border-radius: 20px;
+            }
+
+            .price.free {
               background-color: #ffd740;
+            }
+          }
+
+          .info-course.one, .two, .three {
+            padding: 0 5px;
+          }
+
+          .teacher {
+            padding-left: 5px;
+          }
+
+          p {
+            line-height: 1.5;
+          }
+
+          .info-course.three {
+            i, span {
+              padding-right: 5px;
             }
           }
         }
@@ -461,6 +494,29 @@ a:hover {
         .blocco-corso:nth-child(2) {
           margin: 0 30px;
         }
+      }
+
+      .box-circle {
+        @include flex-row;
+        @include flex-center;
+        width: 100%;
+        height: 80px;
+
+        i {
+          padding: 5px;
+          font-size: 10px;
+          color: #9ce0ff;
+        }
+
+        i.active {
+          color: $selected-link;
+        }
+
+        i:hover {
+          cursor: pointer;
+          color: $selected-link;
+        }
+
       }
     }
   }
