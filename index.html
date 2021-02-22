@@ -200,7 +200,7 @@
         </div>
       </section>
 
-      <section class="pricing-plan">
+      <section class="pricing-plan min-width">
         <div class="container">
           <div class="intestazione">
             <h2>Pricing Plans</h2>
@@ -221,7 +221,7 @@
               <div class="single-plan">
                 <div class="top">
                   <div class="box-img">
-                    <img src="" alt="">
+                    <img :src="imageTable(index)" alt="">
                   </div>
 
                   <div class="plan-name">
@@ -249,17 +249,81 @@
                 </div>
 
                 <div class="bottom">
-
+                  <div class="bottom-button">
+                    <a href="#">GET IT NOW</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
         </div>
-
       </section>
 
+      <section class="partner-logo min-width">
+        <div class="container">
+          <div v-for="(logo, index) in logoPartner" class="logo">
+            <img :src="imagePartner(index)" alt="">
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="my-footer">
+      <div class="container">
+        <section class="top">
+          <section class="left">
+            <div class="section motto">
+              <img src="" alt="">
+              <p>Providing Life Changing <br> Experience Through <br> Education. Class That Fit Your <br> Busy Life. Closer to Home.</p>
+              <div class="telephone">
+                <i class="fas fa-phone-alt"></i>
+                <span>1-677-124-44227</span>
+              </div>
+
+              <div class="open">
+                <i class="far fa-clock"></i>
+                <span>Mon-Sat 8.00 -18.00</span>
+              </div>
+            </div>
+
+            <div class="section popular">
+              <h3>Popular Courses</h3>
+              <div v-for="(element, index) in popularCourses[1].arrayCourses" class="course">
+                <div class="name">
+                  {{element.name}}
+                </div>
+
+                <small class="teacher">
+                  {{element.teacher}}
+                </small>
+              </div>
+            </div>
+
+            <div class="section support">
+              <h3>Support</h3>
+              <div  v-for="element in supportLink" class="link">
+                <a href="#">{{element}}</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="right">
+            <h3>Flexible Learning</h3>
+
+            <div class="box-image">
+              <img src="img/footer-img-1.png" alt="">
+            </div>
+          </section>
+
+        </section>
+
+        <section class="bottom">
+
+        </section>
+
+      </div>
+    </footer>
   </div>
   <script src="js/script.js" charset="utf-8"></script>
 </body>

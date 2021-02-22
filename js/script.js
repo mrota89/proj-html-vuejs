@@ -305,6 +305,19 @@ new Vue({
           true
         ],
       }
+    ],
+    logoPartner: [
+      'h5-client-1',
+      'h5-client-2',
+      'h5-client-3',
+      'h5-client-5'
+    ],
+    supportLink: [
+      'User dashboard',
+      'Contact Us',
+      'FAQ',
+      'Course Offer',
+      'Events'
     ]
   },
 
@@ -336,6 +349,18 @@ new Vue({
     imageCourse: function(index) {
       const icon = this.courses[index].icon;
       const imageString = `img/h5-custom-icon${icon}.png`;
+      return imageString;
+    },
+
+    imageTable: function(index) {
+      const icon = this.pricingPlan[index].img;
+      const imageString = `img/${icon}.png`;
+      return imageString;
+    },
+
+    imagePartner: function(index) {
+      const icon = this.logoPartner[index];
+      const imageString = `img/${icon}.png`;
       return imageString;
     },
 
