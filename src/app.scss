@@ -23,110 +23,126 @@ a:hover {
 /*/classi utility*/
 
 .my-header {
-  @include background-image;
   position: relative;
-  background-size: cover;
-  position: relative;
+  height: 750px;
+  overflow: hidden;
 
   .jumbo-img-box {
     width: 100%;
-    height: 900px;
     overflow: hidden;
 
     img {
       width: 100%;
+      filter: brightness(60%);
     }
   }
 
-  .layer {
+  .container {
+    @include inner-container;
     @include absolute;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 100%;
-    height: 900px;
+    height: 750px;
 
-    .container {
-      @include inner-container;
+    .navbar {
+      @include flex-row;
+      @include flex-center;
+      height: 100px;
+      width: 100%;
 
-      .navbar {
-        @include flex-center;
-        height: 100px;
-        width: 100%;
-        display: flex;
-
-        &-logo {
-          img {
-            width: 80%;
-          }
-        }
-
-        &-menu {
-          @include flex-row ;
-          @include flex-center-around;
-          font-family: $font-paragraph;
-          width: $width-menu-bar;
-          height: 100%;
-
-          .menu-element {
-            text-align: center;
-            color: $nav-item;
-          }
-        }
-
-        &-icons {
-          @include flex-row;
-          width: $width-box-icons;
-          color: $nav-item;
-          justify-content: space-around;
-        }
-      }
-
-      .jumbotron-text {
-        @include absolute;
-        @include flex-column;
-        @include flex-center;
-        text-align: center;
-        width: 100%;
-        height: 50%;
-        color: $white;
-
-        h1 {
-          font-size: 80px;
-          font-family: $font-title;
-        }
-
-        p {
-          padding: 50px 0;
-          line-height: 2;
-          width: 1000px;
-          font-family: $font-paragraph;
-          color: $white;
-        }
-
-        &-button {
-          @include lightblue-button;
-        }
-      }
-
-      .box-circle {
-        @include absolute;
+      .academy {
         @include flex-row;
+        @include flex-center;
+        padding-bottom: 5px;
+        height: 100%;
+        width: 30%;
+        cursor: pointer;
+
+        img {
+          width: 15%;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+
+        .name-academy {
+          color: $white;
+          font-family: $font-title;
+          font-weight: bold;
+          font-size: 30px;
+        }
+      }
+
+      .academy:hover > .name-academy {
+        color: #57657a;
+        text-decoration: underline;
+        text-decoration-color: #dab866;
+      }
+
+      &-menu {
+        @include flex-row ;
         @include flex-center-around;
-        width: 100px;
-        top: 95%;
-        color: rgba(0, 0, 0, 0.2);
+        font-family: $font-paragraph;
+        width: $width-menu-bar;
+        height: 100%;
 
-        i {
-          padding: 3px;
+        .menu-element {
+          text-align: center;
+          color: $nav-item;
         }
+      }
 
-        i.active {
-          color: $white;
-        }
+      &-icons {
+        @include flex-row;
+        width: $width-box-icons;
+        color: $nav-item;
+        justify-content: space-around;
+      }
+    }
 
-        i:hover {
-          color: $white;
-          cursor: pointer;
-        }
+    .jumbotron-text {
+      @include absolute;
+      @include flex-column;
+      @include flex-center;
+      text-align: center;
+      width: 100%;
+      height: 70%;
+      color: $white;
+
+      h1 {
+        font-size: 80px;
+        font-family: $font-title;
+      }
+
+      p {
+        padding: 50px 0;
+        line-height: 2;
+        width: 1000px;
+        font-family: $font-paragraph;
+        color: $white;
+      }
+
+      &-button {
+        @include lightblue-button;
+      }
+    }
+
+    .box-circle {
+      @include flex-row;
+      @include flex-center-around;
+      @include absolute;
+      top: 85%;
+      width: 100px;
+      color: rgba(0, 0, 0, 0.2);
+
+      i {
+        padding: 3px;
+      }
+
+      i.active {
+        color: $white;
+      }
+
+      i:hover {
+        color: $white;
+        cursor: pointer;
       }
     }
   }
@@ -676,7 +692,7 @@ a:hover {
         width: 25%;
 
         .box-image {
-          width: 75%;
+          width: 95%;
 
           img {
             width: 100%;
@@ -689,4 +705,23 @@ a:hover {
       height: 25%;
     }
   }
+}
+
+.button-top {
+  @include flex-column;
+  @include flex-center;
+  width: 50px;
+  height: 50px;
+  background: $azzurro-scuro;
+  color: $white;
+  font-family: $font-paragraph;
+  position: fixed;
+  bottom: 5px;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.button-top.hide {
+  display: none;
 }

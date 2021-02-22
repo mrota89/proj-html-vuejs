@@ -321,6 +321,16 @@ new Vue({
     ]
   },
 
+  mounted() {
+    this.scrollFunction();
+
+    setInterval(() => {
+      this.imgSliderJumbo();
+      this.imgSliderReview();
+      this.imgSliderPopCourse();
+    }, 5000);
+  },
+
   methods: {
     imageJumbo: function() {
       const icon = this.textJumbotron[this.jumboIDX].imgBg;
@@ -358,10 +368,32 @@ new Vue({
       return imageString;
     },
 
+
     imagePartner: function(index) {
       const icon = this.logoPartner[index];
       const imageString = `img/${icon}.png`;
       return imageString;
+    },
+
+    imgSliderJumbo: function() {
+      this.jumboIDX+= 1;
+      if(this.jumboIDX === this.textJumbotron.length) {
+        this.jumboIDX = 0;
+      }
+    },
+
+    imgSliderReview: function() {
+      this.studentReviewIDX+= 1;
+      if(this.studentReviewIDX === this.studentsReview.length) {
+        this.studentReviewIDX = 0;
+      }
+    },
+
+    imgSliderPopCourse: function() {
+      this.coursesIDX+= 1;
+      if(this.coursesIDX === this.popularCourses.length) {
+        this.coursesIDX = 0;
+      }
     },
 
     classTab: function(index) {
@@ -378,6 +410,20 @@ new Vue({
       } else {
         return 'fas fa-circle';
       }
+    },
+
+
+    scrollFunction: function() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop  > 50) {
+        return "button-top";
+      } else {
+        return "button-top hide";
+      }
+    },
+
+// When the user clicks on the button, scroll to the top of the document
+    topFunction: function() {
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
   }
 });//end vue app

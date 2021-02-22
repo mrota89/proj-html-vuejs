@@ -15,43 +15,44 @@
 <body>
   <div id="app">
     <header class="my-header min-width">
+
       <div class="jumbo-img-box">
         <img :src="imageJumbo()" alt="">
       </div>
-      <div class="layer">
-        <div class="container">
 
-          <nav class="navbar">
-            <div class="navbar-logo">
-              <img src="img/logo-light.png" alt="">
-            </div>
-            <div class="navbar-menu">
-              <div v-for="element in menuNav" class="menu-element">
-                <a href="#">{{element}}</a>
-              </div>
-            </div>
-            <div class="navbar-icons">
-              <a href="#"><i class="fas fa-search"></i></a>
-              <a href="#"><i class="fas fa-shopping-bag"></i></a>
-              <a href="#"><i class="fas fa-bars"></i></a>
-            </div>
-          </nav>
+      <div class="container">
 
-          <div v-for="(element, index) in textJumbotron" v-if="index === jumboIDX" class="jumbotron-text">
-            <h1>{{element.title}}</h1>
-            <p>
-              {{element.text}}
-            </p>
-            <div class="jumbotron-text-button">
-              <a href="#">{{element.textButton}}</a>
-            </div>
+        <nav class="navbar">
+
+          <div class="academy">
+            <img src="img/landing-slider-1-logo.png" alt="">
+            <div class="name-academy">iAcademy</div>
           </div>
 
-          <div class="box-circle">
-            <i v-for="(element, index) in textJumbotron" @click="jumboIDX = index"
-            :class="coloraPallino(index, jumboIDX)"></i>
-
+          <div class="navbar-menu">
+            <div v-for="element in menuNav" class="menu-element">
+              <a href="#">{{element}}</a>
+            </div>
           </div>
+          <div class="navbar-icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </div>
+        </nav>
+
+        <div v-for="(element, index) in textJumbotron" v-if="index === jumboIDX" class="jumbotron-text">
+          <h1>{{element.title}}</h1>
+          <p>
+            {{element.text}}
+          </p>
+          <div class="jumbotron-text-button">
+            <a href="#">{{element.textButton}}</a>
+          </div>
+        </div>
+
+        <div class="box-circle">
+          <i v-for="(element, index) in textJumbotron" @click="jumboIDX = index" :class="coloraPallino(index, jumboIDX)"></i>
         </div>
       </div>
     </header>
@@ -103,8 +104,7 @@
 
       <section class="student-review min-width">
         <div class="container">
-          <div v-for="(element, index) in studentsReview"
-          v-if="index === studentReviewIDX" class="review-box">
+          <div v-for="(element, index) in studentsReview" v-if="index === studentReviewIDX" class="review-box">
 
             <div class="box-image">
               <img :src="imageStudent()" alt="">
@@ -120,8 +120,7 @@
             </div>
 
             <div class="box-circle">
-              <i v-for="(element, index) in studentsReview"
-              @click="studentReviewIDX = index" :class="coloraPallino(index, studentReviewIDX)"></i>
+              <i v-for="(element, index) in studentsReview" @click="studentReviewIDX = index" :class="coloraPallino(index, studentReviewIDX)"></i>
             </div>
           </div>
         </div>
@@ -130,13 +129,12 @@
       <section class="learning-possibilities min-width">
         <div class="container">
           <div class="possibilities-choice">
-            <div v-for="(choice, index) in possibilitiesChoices"  @click="choiceLearningIDX = index" :class="classTab(index)">
+            <div v-for="(choice, index) in possibilitiesChoices" @click="choiceLearningIDX = index" :class="classTab(index)">
               {{choice.tabName}}
             </div>
           </div>
 
-          <div v-for="(choice, index) in possibilitiesChoices"
-          v-if="index === choiceLearningIDX" class="info-lerning">
+          <div v-for="(choice, index) in possibilitiesChoices" v-if="index === choiceLearningIDX" class="info-lerning">
 
             <h3>{{choice.title}}</h3>
             <p>
@@ -172,7 +170,7 @@
               <div class="info-course one">
                 <div class="course-title">{{element.name}}</div>
                 <div v-if="element.price === 'FREE'" class="price free">{{element.price}}</div>
-                <div v-if="element.price !== 'FREE'"class="price">{{element.price}}</div>
+                <div v-if="element.price !== 'FREE'" class="price">{{element.price}}</div>
               </div>
 
               <div class="teacher">
@@ -193,8 +191,7 @@
           </div>
 
           <div class="box-circle">
-            <i v-for="(element, index) in popularCourses" @click="coursesIDX = index"
-            :class="coloraPallino(index, coursesIDX)"></i>
+            <i v-for="(element, index) in popularCourses" @click="coursesIDX = index" :class="coloraPallino(index, coursesIDX)"></i>
 
           </div>
         </div>
@@ -234,16 +231,13 @@
                 </div>
 
                 <div class="middle">
-                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
-                  v-if="element !== false && element !== true" class="value">
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty" v-if="element !== false && element !== true" class="value">
                     {{element}}
                   </div>
-                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
-                  v-if="element === true" class="value">
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty" v-if="element === true" class="value">
                     <i class="fas fa-check"></i>
                   </div>
-                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
-                  v-if="element === false" class="value">
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty" v-if="element === false" class="value">
                     <i class="fas fa-times"></i>
                   </div>
                 </div>
@@ -302,7 +296,7 @@
 
             <div class="section support">
               <h3>Support</h3>
-              <div  v-for="element in supportLink" class="link">
+              <div v-for="element in supportLink" class="link">
                 <a href="#">{{element}}</a>
               </div>
             </div>
@@ -324,6 +318,11 @@
 
       </div>
     </footer>
+
+    <div @click="topFunction" :class="scrollFunction()">
+      <i class="fas fa-angle-up"></i>
+      <strong>TOP</strong>
+    </div>
   </div>
   <script src="js/script.js" charset="utf-8"></script>
 </body>

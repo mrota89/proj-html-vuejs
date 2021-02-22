@@ -22,45 +22,63 @@ a:hover {
 
 /*/classi utility*/
 .my-header {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
   position: relative;
-  background-size: cover;
-  position: relative;
+  height: 750px;
+  overflow: hidden;
 }
 .my-header .jumbo-img-box {
   width: 100%;
-  height: 900px;
   overflow: hidden;
 }
 .my-header .jumbo-img-box img {
   width: 100%;
+  filter: brightness(60%);
 }
-.my-header .layer {
+.my-header .container {
+  width: 1000px;
+  margin: 0 auto;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 900px;
+  height: 750px;
 }
-.my-header .layer .container {
-  width: 1000px;
-  margin: 0 auto;
-}
-.my-header .layer .container .navbar {
+.my-header .container .navbar {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100px;
   width: 100%;
+}
+.my-header .container .navbar .academy {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  height: 100%;
+  width: 30%;
+  cursor: pointer;
 }
-.my-header .layer .container .navbar-logo img {
-  width: 80%;
+.my-header .container .navbar .academy img {
+  width: 15%;
+  margin-right: 5px;
+  vertical-align: middle;
 }
-.my-header .layer .container .navbar-menu {
+.my-header .container .navbar .academy .name-academy {
+  color: #fff;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+.my-header .container .navbar .academy:hover > .name-academy {
+  color: #57657a;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #dab866;
+          text-decoration-color: #dab866;
+}
+.my-header .container .navbar-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -69,18 +87,18 @@ a:hover {
   width: 600px;
   height: 100%;
 }
-.my-header .layer .container .navbar-menu .menu-element {
+.my-header .container .navbar-menu .menu-element {
   text-align: center;
   color: #f6f5f4;
 }
-.my-header .layer .container .navbar-icons {
+.my-header .container .navbar-icons {
   display: flex;
   flex-direction: row;
   width: 100px;
   color: #f6f5f4;
   justify-content: space-around;
 }
-.my-header .layer .container .jumbotron-text {
+.my-header .container .jumbotron-text {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -91,47 +109,47 @@ a:hover {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 50%;
+  height: 70%;
   color: #fff;
 }
-.my-header .layer .container .jumbotron-text h1 {
+.my-header .container .jumbotron-text h1 {
   font-size: 80px;
   font-family: "PT Serif", serif;
 }
-.my-header .layer .container .jumbotron-text p {
+.my-header .container .jumbotron-text p {
   padding: 50px 0;
   line-height: 2;
   width: 1000px;
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
-.my-header .layer .container .jumbotron-text-button {
+.my-header .container .jumbotron-text-button {
   width: 200px;
   height: 50px;
   background-color: #045d8c;
   font-family: "Roboto", sans-serif;
   line-height: 50px;
 }
-.my-header .layer .container .box-circle {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+.my-header .container .box-circle {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  top: 85%;
   width: 100px;
-  top: 95%;
   color: rgba(0, 0, 0, 0.2);
 }
-.my-header .layer .container .box-circle i {
+.my-header .container .box-circle i {
   padding: 3px;
 }
-.my-header .layer .container .box-circle i.active {
+.my-header .container .box-circle i.active {
   color: #fff;
 }
-.my-header .layer .container .box-circle i:hover {
+.my-header .container .box-circle i:hover {
   color: #fff;
   cursor: pointer;
 }
@@ -663,11 +681,32 @@ a:hover {
   width: 25%;
 }
 .my-footer .container section.top section.right .box-image {
-  width: 75%;
+  width: 95%;
 }
 .my-footer .container section.top section.right .box-image img {
   width: 100%;
 }
 .my-footer .container section.bottom {
   height: 25%;
+}
+
+.button-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #045d8c;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  position: fixed;
+  bottom: 5px;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.button-top.hide {
+  display: none;
 }
