@@ -248,6 +248,64 @@ new Vue({
         ]
       },
     ],
+
+    pricingPlanProperty: [
+      'Number Of Courses',
+      'Time', 'Web Designing',
+      'Human-Centered Design',
+      'Basic Marketing',
+      'Python for Everybody',
+      'Android Developer',
+      'Business English'
+    ],
+
+    pricingPlan: [
+      {
+        img: 'h5-custom-icon-7',
+        name: 'Standard',
+        price: '$12',
+        valueProperty: [
+          2,
+          '15 Days',
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        img: 'h5-custom-icon-8',
+        name: 'Professional',
+        price: '$59',
+        valueProperty: [
+          2,
+          '30 Days',
+          true,
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+      },
+      {
+        img: 'h5-custom-icon-9',
+        name: 'Advanced',
+        price: '$88',
+        valueProperty: [
+          2,
+          '30 Days',
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+      }
+    ]
   },
 
   methods: {

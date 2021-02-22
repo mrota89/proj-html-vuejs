@@ -386,7 +386,7 @@ a:hover {
   width: 100%;
 }
 .my-main section.popular-courses {
-  height: 700px;
+  height: 950px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -398,7 +398,7 @@ a:hover {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   background-image: url("../img/page-background-img.png");
@@ -422,7 +422,6 @@ a:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: 50px;
   width: 100%;
   height: 400px;
 }
@@ -431,7 +430,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  height: 100%;
+  height: 120%;
   width: calc(100% / 3);
   font-family: "Roboto", sans-serif;
   color: #9c9c9c;

@@ -394,7 +394,7 @@ a:hover {
   }
 
   section.popular-courses {
-    height: 700px;
+    height: 950px;
     @include flex-row;
     @include flex-center;
     border-bottom: 1px solid #ccc;
@@ -402,7 +402,7 @@ a:hover {
     .container {
       @include inner-container;
       @include flex-column;
-      @include flex-center;
+      @include flex-center-around;
       height: 100%;
       background-image: url("../img/page-background-img.png");
 
@@ -425,14 +425,13 @@ a:hover {
       .slider-container {
         @include flex-row;
         @include flex-center-around;
-        margin-top: 50px;
         width: 100%;
         height: 400px;
 
         .blocco-corso {
           @include flex-column;
           @include flex-start-around;
-          height: 100%;
+          height: 120%;
           width: calc(100% / 3);
           font-family: $font-paragraph;
           color: $paragraph-color;

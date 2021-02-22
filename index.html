@@ -198,6 +198,51 @@
 
           </div>
         </div>
+      </section>
+
+      <section class="princing-plan">
+        <div class="container">
+          <h2>Pricing Plans</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+          <div class="table">
+            <div class="">
+              Save up to 40% by paying weekly
+            </div>
+            <div v-for="element in pricingPlanProperty" class="column-property">
+              {{element}}
+            </div>
+
+            <div v-for="element in pricingPlan" class="column-products">
+              <div class="single-plan">
+                <div class="top">
+                  <div class="box-img">
+                    <img src="" alt="">
+                  </div>
+
+                  <div class="plan-name">
+                    {{element.name}}
+                  </div>
+
+                  <div class="price">
+                    {{element.price}}
+                  </div>
+                </div>
+
+                <div class="middle">
+                  <div class="value">
+
+                  </div>
+                </div>
+
+                <div class="bottom">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
       </section>
 
