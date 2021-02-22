@@ -39,6 +39,11 @@
   align-items: center;
 }
 
+@mixin between-center {
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin flex-start-around {
   justify-content: space-around;
   align-items: flex-start;

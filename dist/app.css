@@ -413,11 +413,44 @@ a:hover {
   font-family: "Roboto", sans-serif;
   color: #9c9c9c;
 }
-.my-main section.popular-courses .container .blocco-corso {
+.my-main section.popular-courses .container .slider-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  height: 80%;
-  width: 300px;
+  height: 100%;
+  width: calc(100% / 3);
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .box-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .box-img img {
+  width: 100%;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one .price-free {
+  background-color: #40c4ff;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info-course.one .price {
+  background-color: #ffd740;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso:nth-child(2) {
+  margin: 0 30px;
 }

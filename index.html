@@ -163,31 +163,40 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
 
-          <div v-for="(element, index) in popularCourses[coursesIDX].arrayCourses" class="blocco-corso">
-            <div class="box-img">
-              <img :src="imagePopularCourses(index)" alt="">
-            </div>
+          <div class="slider-container">
+            <div v-for="(element, index) in popularCourses[coursesIDX].arrayCourses" class="blocco-corso">
+              <div class="box-img">
+                <img :src="imagePopularCourses(index)" alt="">
+              </div>
 
-            <div class="info-course one">
-              <span>{{element.name}}</span>
-              <span>{{element.price}}</span>
+              <div class="info-course one">
+                <div>{{element.name}}</div>
+                <div v-if="element.price === 'FREE'" class="price-free">{{element.price}}</div>
+                <div v-if="element.price !== 'FREE'"class="price">{{element.price}}</div>
+              </div>
+
               <div class="teacher">
                 {{element.teacher}}
               </div>
-            </div>
 
-            <p class="info-course two">
-              {{element.description}}
-            </p>
+              <p class="info-course two">
+                {{element.description}}
+              </p>
 
-            <div class="info-course three">
-              <i></i>
-              <span>{{element.placeAvailable}}</span>
-              <i></i>
-              <span>{{element.typeOfCourse}}</span>
+              <div class="info-course three">
+                <i class="fas fa-user"></i>
+                <span>{{element.placeAvailable}}</span>
+                <i class="fas fa-tag"></i>
+                <span>{{element.typeOfCourse}}</span>
+              </div>
             </div>
           </div>
 
+          <div class="box-circle">
+            <i v-for="(element, index) in popularCourses" @click="coursesIDX = index"
+            :class="coloraPallino(index, coursesIDX)"></i>
+
+          </div>
         </div>
 
       </section>
