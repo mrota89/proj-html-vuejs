@@ -398,13 +398,14 @@ a:hover {
     @include flex-row;
     @include flex-center;
     border-bottom: 1px solid #ccc;
+    background-image: url("../img/page-background-img.png");
 
     .container {
       @include inner-container;
       @include flex-column;
       @include flex-center-around;
       height: 100%;
-      background-image: url("../img/page-background-img.png");
+
 
       .intestazione {
         text-align: center;
@@ -514,6 +515,61 @@ a:hover {
         i:hover {
           cursor: pointer;
           color: $selected-link;
+        }
+
+      }
+    }
+  }
+
+  section.pricing-plan {
+    height: 1200px;
+    background-image: url("../img/page-background-img.png");
+
+    .container {
+      @include inner-container;
+      @include flex-column;
+      @include flex-center-around;
+
+      .intestazione {
+        text-align: center;
+
+        h2 {
+          @include h2-style;
+        }
+
+        p {
+          padding: 30px 0;
+          line-height: 1.5;
+          width: 1000px;
+          font-family: $font-paragraph;
+          color: $paragraph-color;
+        }
+      }
+
+      .table {
+        @include flex-row;
+        @include flex-center-around;
+        width: 100%;
+
+        .column-property, .column-products {
+          width: (100% / 4);
+        }
+
+        .property {
+          font-family: $font-title;
+          height: 50px;
+          width: 100%;
+        }
+
+        .save, .top {
+          height: 100px;
+          font-family: $font-title;
+        }
+
+        .value {
+          font-family: $font-paragraph;
+          height: 50px;
+          width: 100%;
         }
 
       }

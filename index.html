@@ -200,20 +200,24 @@
         </div>
       </section>
 
-      <section class="princing-plan">
+      <section class="pricing-plan">
         <div class="container">
-          <h2>Pricing Plans</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="intestazione">
+            <h2>Pricing Plans</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
 
           <div class="table">
-            <div class="">
-              Save up to 40% by paying weekly
-            </div>
-            <div v-for="element in pricingPlanProperty" class="column-property">
-              {{element}}
+            <div class="column-property">
+              <div class="save">
+                Save up to 40% by paying weekly
+              </div>
+              <div v-for="element in pricingPlanProperty" class="property">
+                {{element}}
+              </div>
             </div>
 
-            <div v-for="element in pricingPlan" class="column-products">
+            <div v-for="(element, index) in pricingPlan" class="column-products">
               <div class="single-plan">
                 <div class="top">
                   <div class="box-img">
@@ -230,8 +234,17 @@
                 </div>
 
                 <div class="middle">
-                  <div class="value">
-
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
+                  v-if="element !== false && element !== true" class="value">
+                    {{element}}
+                  </div>
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
+                  v-if="element === true" class="value">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
+                  v-if="element === false" class="value">
+                    <i class="fas fa-times"></i>
                   </div>
                 </div>
 
