@@ -64,9 +64,18 @@
 @mixin lightblue-button {
   width: 200px;
   height: 50px;
-  background-color: #045d8c;
+  background-color: $azzurro-scuro;
   font-family: $font-paragraph;
   line-height: 50px;
+}
+
+@mixin white-button {
+  width: 200px;
+  height: 50px;
+  background-color: $white;
+  font-family: $font-paragraph;
+  line-height: 50px;
+  border: solid 2px $light-grey;
 }
 
 @mixin learn-blue {
@@ -95,6 +104,7 @@ $dark-grey: #8b8383;
 $light-grey: #cecece;
 $background-hover: #f2f8fc;
 $azzurro-scuro: #045d8c;
+$border-table: solid 1px $light-grey;
 
 $section-height-600: 600px;
 $min-width: 1000px;

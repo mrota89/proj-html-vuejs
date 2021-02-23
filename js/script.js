@@ -5,6 +5,10 @@ new Vue({
     studentReviewIDX: 0,
     choiceLearningIDX: 0,
     coursesIDX: 0,
+    plansIDX: 0,
+    cartVisibility: false,
+    buttonTopVisibility: false,
+    productAdded: 0,
     menuNav:['HOME', 'COURSES', 'INSTRUCTORS', 'EVENTS', 'PAGES', 'ELEMENTS'],
     textJumbotron: [
       {
@@ -238,7 +242,7 @@ new Vue({
           },
           {
             img: '9',
-            name: 'Economics of financial markets',
+            name: 'Economics of Financial Markets',
             teacher: 'Mario Draghi',
             price: '30$',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -280,7 +284,7 @@ new Vue({
         name: 'Professional',
         price: '$59',
         valueProperty: [
-          2,
+          4,
           '30 Days',
           true,
           true,
@@ -295,7 +299,7 @@ new Vue({
         name: 'Advanced',
         price: '$88',
         valueProperty: [
-          2,
+          6,
           '30 Days',
           true,
           true,
@@ -322,7 +326,6 @@ new Vue({
   },
 
   mounted() {
-    this.scrollFunction();
 
     setInterval(() => {
       this.imgSliderJumbo();
@@ -396,11 +399,11 @@ new Vue({
       }
     },
 
-    classTab: function(index) {
-      if (index === this.choiceLearningIDX) {
-        return 'choice selected';
+    classTab: function(index, idx, selected, notSelected) {
+      if (index === idx) {
+        return selected;
       } else {
-        return 'choice';
+        return notSelected;
       }
     },
 
@@ -412,18 +415,13 @@ new Vue({
       }
     },
 
-
-    scrollFunction: function() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop  > 50) {
-        return "button-top";
-      } else {
-        return "button-top hide";
-      }
+    topFunction: function() {
+      document.documentElement.scrollTop = 0;
     },
 
-// When the user clicks on the button, scroll to the top of the document
-    topFunction: function() {
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    alertAddedProduct: function() {
+      this.productAdded+= 1
+      alert('Product added to cart.');
     }
   }
 });//end vue app

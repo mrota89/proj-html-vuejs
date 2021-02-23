@@ -14,7 +14,7 @@
 
 <body>
   <div id="app">
-    <header class="my-header min-width">
+    <header class="my-header min-width" @mouseover="buttonTopVisibility = false">
 
       <div class="jumbo-img-box">
         <img :src="imageJumbo()" alt="">
@@ -38,6 +38,7 @@
             <a href="#"><i class="fas fa-search"></i></a>
             <a href="#"><i class="fas fa-shopping-bag"></i></a>
             <a href="#"><i class="fas fa-bars"></i></a>
+            <div class="product-added">{{productAdded}}</div>
           </div>
         </nav>
 
@@ -58,7 +59,7 @@
     </header>
 
     <main class="my-main">
-      <section class="avalaible-courses min-width">
+      <section class="avalaible-courses min-width" @mouseover="buttonTopVisibility = false" @mouseleave="buttonTopVisibility = true">
         <div class="container">
           <div v-for="(element, index) in courses" class="single-course">
             <img :src="imageCourse(index)" alt="">
@@ -129,7 +130,7 @@
       <section class="learning-possibilities min-width">
         <div class="container">
           <div class="possibilities-choice">
-            <div v-for="(choice, index) in possibilitiesChoices" @click="choiceLearningIDX = index" :class="classTab(index)">
+            <div v-for="(choice, index) in possibilitiesChoices" @click="choiceLearningIDX = index" :class="classTab(index, choiceLearningIDX, 'choice selected', 'choice')">
               {{choice.tabName}}
             </div>
           </div>
@@ -167,25 +168,27 @@
                 <img :src="imagePopularCourses(index)" alt="">
               </div>
 
-              <div class="info-course one">
-                <div class="course-title">{{element.name}}</div>
-                <div v-if="element.price === 'FREE'" class="price free">{{element.price}}</div>
-                <div v-if="element.price !== 'FREE'" class="price">{{element.price}}</div>
-              </div>
+              <div class="info">
+                <div class="info-course one">
+                  <div class="course-title">
+                    <div class="name-course">{{element.name}}</div>
+                    <small class="teacher">{{element.teacher}}</small>
+                  </div>
 
-              <div class="teacher">
-                {{element.teacher}}
-              </div>
+                  <div v-if="element.price === 'FREE'" class="price free">{{element.price}}</div>
+                  <div v-if="element.price !== 'FREE'" class="price">{{element.price}}</div>
+                </div>
 
-              <p class="info-course two">
-                {{element.description}}
-              </p>
+                <p class="info-course two">
+                  {{element.description}}
+                </p>
 
-              <div class="info-course three">
-                <i class="fas fa-user"></i>
-                <span>{{element.placeAvailable}}</span>
-                <i class="fas fa-tag"></i>
-                <span>{{element.typeOfCourse}}</span>
+                <div class="info-course three">
+                  <i class="fas fa-user"></i>
+                  <span>{{element.placeAvailable}}</span>
+                  <i class="fas fa-tag"></i>
+                  <span>{{element.typeOfCourse}}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -197,8 +200,13 @@
         </div>
       </section>
 
-      <section class="pricing-plan min-width">
+      <section @mouseover="cartVisibility = true" @mouseleave="cartVisibility = false" class="pricing-plan min-width">
         <div class="container">
+          <div v-if="cartVisibility === true" class="cart-button">
+            <a href="#">
+              <img src="img/cart.svg" alt="">
+            </a>
+          </div>
           <div class="intestazione">
             <h2>Pricing Plans</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -206,15 +214,16 @@
 
           <div class="table">
             <div class="column-property">
-              <div class="save">
-                Save up to 40% by paying weekly
-              </div>
+              <strong class="save">
+                Save up to 40% by paying <br> weekly
+              </strong>
               <div v-for="element in pricingPlanProperty" class="property">
                 {{element}}
               </div>
             </div>
 
-            <div v-for="(element, index) in pricingPlan" class="column-products">
+            <div v-for="(element, index) in pricingPlan"
+            :class="classTab(index, plansIDX, 'column-products active', 'column-products')">
               <div class="single-plan">
                 <div class="top">
                   <div class="box-img">
@@ -243,7 +252,7 @@
                 </div>
 
                 <div class="bottom">
-                  <div class="bottom-button">
+                  <div @mouseover="plansIDX = index" @click="alertAddedProduct()" class="bottom-button">
                     <a href="#">GET IT NOW</a>
                   </div>
                 </div>
@@ -319,7 +328,7 @@
       </div>
     </footer>
 
-    <div @click="topFunction" :class="scrollFunction()">
+    <div v-if="buttonTopVisibility === true" @click="topFunction" class="button-top">
       <i class="fas fa-angle-up"></i>
       <strong>TOP</strong>
     </div>

@@ -91,9 +91,22 @@ a:hover {
 
       &-icons {
         @include flex-row;
+        position: relative;
         width: $width-box-icons;
         color: $nav-item;
         justify-content: space-around;
+
+        .product-added {
+          @include absolute;
+          top: 30%;
+          left: 60%;
+          height: 15px;
+          width: 15px;
+          background: $azzurro-scuro;
+          border-radius: 40%;
+          font-size: 15px;
+          text-align: center;
+        }
       }
     }
 
@@ -410,7 +423,7 @@ a:hover {
   }
 
   section.popular-courses {
-    height: 950px;
+    height: 1000px;
     @include flex-row;
     @include flex-center;
     border-bottom: 1px solid #ccc;
@@ -420,7 +433,7 @@ a:hover {
       @include inner-container;
       @include flex-column;
       @include flex-center-around;
-      height: 100%;
+      height: 80%;
 
 
       .intestazione {
@@ -453,7 +466,6 @@ a:hover {
           font-family: $font-paragraph;
           color: $paragraph-color;
           font-size: 15px;
-          background-color: $white;
 
           .box-img {
             width: 100%;
@@ -465,44 +477,48 @@ a:hover {
             }
           }
 
-          .info-course.one {
-            @include flex-row;
-            @include between-center;
-            width: 100%;
-
-            .course-title {
-              font-family: $font-title;
-              font-weight: bold;
-            }
-
-            .price {
-              background-color: #40c4ff;
-              color: $white;
-              text-align: center;
-              width: 50px;
-              border-radius: 20px;
-            }
-
-            .price.free {
-              background-color: #ffd740;
-            }
-          }
-
-          .info-course.one, .two, .three {
+          .info {
+            background-color: $white;
             padding: 0 5px;
-          }
+            @include flex-column;
+            @include flex-start-around;
+            height: 50%;
 
-          .teacher {
-            padding-left: 5px;
-          }
+            .info-course.one {
+              @include flex-row;
+              @include between-center;
+              width: 100%;
 
-          p {
-            line-height: 1.5;
-          }
+              .course-title {
+                font-family: $font-title;
+                font-weight: bold;
 
-          .info-course.three {
-            i, span {
-              padding-right: 5px;
+                .teacher {
+                  font-weight: lighter;
+                }
+              }
+
+              .price {
+                background-color: #40c4ff;
+                color: $white;
+                text-align: center;
+                width: 50px;
+                border-radius: 20px;
+              }
+
+              .price.free {
+                background-color: #ffd740;
+              }
+            }
+
+            p {
+              line-height: 1.5;
+            }
+
+            .info-course.three {
+              i, span {
+                padding-right: 5px;
+              }
             }
           }
         }
@@ -538,7 +554,7 @@ a:hover {
   }
 
   section.pricing-plan {
-    height: 900px;
+    height: 1100px;
     background-image: url("../img/page-background-img.png");
     @include flex-row;
     @include flex-center;
@@ -547,6 +563,27 @@ a:hover {
       @include inner-container;
       @include flex-column;
       @include flex-center-around;
+      position: relative;
+
+      .cart-button {
+        @include absolute;
+        @include flex-column;
+        @include flex-center;
+        left: 103%;
+        top: 30%;
+        width: 50px;
+        height: 50px;
+        box-shadow: 5px 10px 18px #888888;
+        text-align: center;
+
+        img {
+          width: 50%;
+        }
+      }
+
+      .cart-button:hover {
+        cursor: pointer
+      }
 
       .intestazione {
         text-align: center;
@@ -567,37 +604,56 @@ a:hover {
       .table {
         @include flex-row;
         width: 100%;
-        border: solid 1px $light-grey;
-
+        background: $white;
 
         .column-property, .column-products {
           width: (100% / 4);
-          border: solid 1px $light-grey;
+          border-top: 5px solid #d6f2ff;
+        }
+
+        .column-products.active {
+          border-top: 5px solid $azzurro-scuro;
+        }
+
+        .column-products {
+          border-left: $border-table;
+          border-bottom: $border-table;
+        }
+
+        .column-products:last-child {
+          border-right: $border-table;
         }
 
         .property {
           @include flex-row;
-          @include flex-center;
+          @include flex-start-center;
           font-family: $font-title;
+          font-weight: bold;
           height: 50px;
           width: 100%;
-          border: solid 1px $light-grey;
+          border-bottom: $border-table;
+          border-left: $border-table;
           padding-left: 30px;
         }
 
         .save {
           padding: 30px;
+          border-left: $border-table;
         }
 
         .save, .top {
-          height: 200px;
+          height: 250px;
           font-family: $font-title;
+          @include flex-column;
+          @include flex-center;
           font-size: 25px;
           text-align: left;
+          border-bottom: $border-table;
         }
 
         .top {
           text-align: center;
+          background: #f7fdff;
 
           .price {
             font-size: 20px;
@@ -611,21 +667,42 @@ a:hover {
           height: 50px;
           width: 100%;
           text-align: center;
-          border: solid 1px $light-grey;
+          border-bottom: $border-table;
+
+          i.fa-check {
+            color: $selected-link;
+          }
+
+          i.fa-times {
+            color: $dark-grey;
+          }
         }
 
         .bottom {
           @include flex-row;
           @include flex-center;
           height: 100px;
-
+          background: #f7fdff;
 
           &-button {
-            @include lightblue-button;
+            @include white-button;
             text-align: center;
+
+            a {
+              color: $dark-grey;
+              font-weight: bold;
+            }
+          }
+
+          &-button:hover {
+            @include lightblue-button;
+            cursor: pointer;
+
+            a {
+              color: $white;
+            }
           }
         }
-
       }
     }
   }
@@ -707,6 +784,7 @@ a:hover {
   }
 }
 
+
 .button-top {
   @include flex-column;
   @include flex-center;
@@ -720,8 +798,4 @@ a:hover {
   right: 0;
   z-index: 2;
   cursor: pointer;
-}
-
-.button-top.hide {
-  display: none;
 }
