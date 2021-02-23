@@ -168,7 +168,7 @@ a:hover {
       @include inner-container;
       @include flex-row ;
       @include flex-start-around;
-      margin-top: 50px;
+      padding-top: 50px;
       height: 300px;
 
       .single-course {
@@ -737,19 +737,43 @@ a:hover {
     @include flex-column;
     @include flex-end-center;
     height: 100%;
-    color: $white;
+    color: #919191;
+
+    a {
+      color: #919191;
+    }
+
+    a:hover {
+      color: $selected-link;
+    }
 
     section.top {
     @include flex-row;
     @include flex-start-around;
     width: 100%;
     height: 50%;
-    border-bottom: solid #fff 1px ;
+    border-bottom: solid $white 1px ;
+
+      h3 {
+        font-size: 25px;
+        font-family: $font-title;
+        color: $white;
+      }
+
+
 
       section.left {
         @include flex-row;
         height: 100%;
         width: 75%;
+
+        span, small {
+          font-family: $font-paragraph;
+        }
+
+        small {
+          line-height: 2;
+        }
 
         .section {
           @include flex-column;
@@ -760,6 +784,35 @@ a:hover {
 
         .motto {
           line-height: 1.5;
+          height: 80%;
+
+          i {
+            margin-right: 10px;
+          }
+
+          .academy {
+            @include flex-row;
+            @include flex-start-center;
+            cursor: pointer;
+
+            img {
+              width: 15%;
+              margin-right: 5px;
+            }
+
+            .name-academy {
+              color: $white;
+              font-family: $font-title;
+              font-weight: bold;
+              font-size: 25px;
+            }
+          }
+
+          .academy:hover > a {
+            color: #57657a;
+            text-decoration: underline;
+            text-decoration-color: #dab866;
+          }
         }
       }
 
@@ -769,7 +822,8 @@ a:hover {
         width: 25%;
 
         .box-image {
-          width: 95%;
+          width: 85%;
+          padding-top: 20px;
 
           img {
             width: 100%;
@@ -779,7 +833,18 @@ a:hover {
     }
 
     section.bottom {
+      @include flex-row;
+      @include between-center;
       height: 25%;
+      width: 100%;
+      font-family: $font-paragraph;
+
+      .copyright, .contact {
+        @include flex-row;
+        @include between-center;
+        width: 40%
+      }
+
     }
   }
 }

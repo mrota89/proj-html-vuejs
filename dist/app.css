@@ -176,7 +176,7 @@ a:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  margin-top: 50px;
+  padding-top: 50px;
   height: 300px;
 }
 .my-main section.avalaible-courses .container .single-course {
@@ -730,7 +730,13 @@ a:hover {
   justify-content: flex-end;
   align-items: center;
   height: 100%;
-  color: #fff;
+  color: #919191;
+}
+.my-footer .container a {
+  color: #919191;
+}
+.my-footer .container a:hover {
+  color: #3db6ec;
 }
 .my-footer .container section.top {
   display: flex;
@@ -741,11 +747,22 @@ a:hover {
   height: 50%;
   border-bottom: solid #fff 1px;
 }
+.my-footer .container section.top h3 {
+  font-size: 25px;
+  font-family: "PT Serif", serif;
+  color: #fff;
+}
 .my-footer .container section.top section.left {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 75%;
+}
+.my-footer .container section.top section.left span, .my-footer .container section.top section.left small {
+  font-family: "Roboto", sans-serif;
+}
+.my-footer .container section.top section.left small {
+  line-height: 2;
 }
 .my-footer .container section.top section.left .section {
   display: flex;
@@ -757,6 +774,33 @@ a:hover {
 }
 .my-footer .container section.top section.left .motto {
   line-height: 1.5;
+  height: 80%;
+}
+.my-footer .container section.top section.left .motto i {
+  margin-right: 10px;
+}
+.my-footer .container section.top section.left .motto .academy {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.my-footer .container section.top section.left .motto .academy img {
+  width: 15%;
+  margin-right: 5px;
+}
+.my-footer .container section.top section.left .motto .academy .name-academy {
+  color: #fff;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+.my-footer .container section.top section.left .motto .academy:hover > a {
+  color: #57657a;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #dab866;
+          text-decoration-color: #dab866;
 }
 .my-footer .container section.top section.right {
   display: flex;
@@ -766,13 +810,27 @@ a:hover {
   width: 25%;
 }
 .my-footer .container section.top section.right .box-image {
-  width: 95%;
+  width: 85%;
+  padding-top: 20px;
 }
 .my-footer .container section.top section.right .box-image img {
   width: 100%;
 }
 .my-footer .container section.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 25%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.my-footer .container section.bottom .copyright, .my-footer .container section.bottom .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
 }
 
 .button-top {

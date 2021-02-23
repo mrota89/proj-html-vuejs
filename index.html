@@ -14,7 +14,7 @@
 
 <body>
   <div id="app">
-    <header class="my-header min-width" @mouseover="buttonTopVisibility = false">
+    <header class="my-header min-width" @mouseover="buttonTopVisibility = false"  @mouseleave="buttonTopVisibility = true">
 
       <div class="jumbo-img-box">
         <img :src="imageJumbo()" alt="">
@@ -277,16 +277,19 @@
         <section class="top">
           <section class="left">
             <div class="section motto">
-              <img src="" alt="">
-              <p>Providing Life Changing <br> Experience Through <br> Education. Class That Fit Your <br> Busy Life. Closer to Home.</p>
+              <div class="academy">
+                <img src="img/landing-slider-1-logo.png" alt="">
+                <a href="#"><div class="name-academy">iAcademy</div></a>
+              </div>
+              <small>Providing Life Changing <br> Experience Through <br> Education. Class That Fit Your <br> Busy Life. Closer to Home.</small>
               <div class="telephone">
                 <i class="fas fa-phone-alt"></i>
-                <span>1-677-124-44227</span>
+                <small>1-677-124-44227</small>
               </div>
 
               <div class="open">
                 <i class="far fa-clock"></i>
-                <span>Mon-Sat 8.00 -18.00</span>
+                <small>Mon-Sat 8.00 -18.00</small>
               </div>
             </div>
 
@@ -294,20 +297,20 @@
               <h3>Popular Courses</h3>
               <div v-for="(element, index) in popularCourses[1].arrayCourses" class="course">
                 <div class="name">
-                  {{element.name}}
+                  <a href="#">{{element.name}}</a>
                 </div>
 
                 <small class="teacher">
-                  {{element.teacher}}
+                  <a href="#">{{element.teacher}}</a>
                 </small>
               </div>
             </div>
 
             <div class="section support">
               <h3>Support</h3>
-              <div v-for="element in supportLink" class="link">
+              <small v-for="element in supportLink" class="link">
                 <a href="#">{{element}}</a>
-              </div>
+              </small>
             </div>
           </section>
 
@@ -318,11 +321,20 @@
               <img src="img/footer-img-1.png" alt="">
             </div>
           </section>
-
         </section>
 
         <section class="bottom">
+          <small class="copyright">
+            Copyrights 2017 ©Mikado Themes
+          </small>
 
+          <div class="contact">
+            <small>CALL +44 300 303 0266</small>
+            <small>FOLLOW US</small>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
         </section>
 
       </div>

@@ -7,7 +7,7 @@ new Vue({
     coursesIDX: 0,
     plansIDX: 0,
     cartVisibility: false,
-    buttonTopVisibility: false,
+    buttonTopVisibility: true,
     productAdded: 0,
     menuNav:['HOME', 'COURSES', 'INSTRUCTORS', 'EVENTS', 'PAGES', 'ELEMENTS'],
     textJumbotron: [
