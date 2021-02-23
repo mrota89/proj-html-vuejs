@@ -325,14 +325,16 @@ new Vue({
 
   mounted() {
 
+    //ogni 10 secondi scorre lo slider
     setInterval(() => {
       this.imgSliderJumbo();
       this.imgSliderReview();
       this.imgSliderPopCourse();
-    }, 5000);
+    }, 10000);
   },
 
   methods: {
+    //funzioni per percorso immagini
     imageJumbo: function() {
       const icon = this.textJumbotron[this.jumboIDX].imgBg;
       const imageString = `img/course-${icon}-f-img.jpg`;
@@ -375,28 +377,32 @@ new Vue({
       const imageString = `img/${icon}.png`;
       return imageString;
     },
+    //end funzioni per percorso immagini
 
+    //funzioni slider automatico
     imgSliderJumbo: function() {
-      this.jumboIDX+= 1;
+      this.jumboIDX += 1;
       if(this.jumboIDX === this.textJumbotron.length) {
         this.jumboIDX = 0;
       }
     },
 
     imgSliderReview: function() {
-      this.studentReviewIDX+= 1;
+      this.studentReviewIDX += 1;
       if(this.studentReviewIDX === this.studentsReview.length) {
         this.studentReviewIDX = 0;
       }
     },
 
     imgSliderPopCourse: function() {
-      this.coursesIDX+= 1;
+      this.coursesIDX += 1;
       if(this.coursesIDX === this.popularCourses.length) {
         this.coursesIDX = 0;
       }
     },
+    //end funzioni slider automatico
 
+    //ritorna una classe diversa per la tab selezionata
     classTab: function(index, idx, selected, notSelected) {
       if (index === idx) {
         return selected;
@@ -405,6 +411,7 @@ new Vue({
       }
     },
 
+    //ritorna un classe diversa per il pallino selezionato
     coloraPallino: function(index, idx) {
       if(index === idx) {
         return 'fas fa-circle active';
@@ -413,10 +420,12 @@ new Vue({
       }
     },
 
+    //scorre la pagina verso l'alto
     topFunction: function() {
       document.documentElement.scrollTop = 0;
     },
 
+    //aggiunge un numero all'icona del carrello nella navbar e mostra alert per aggiunta del prodotto
     alertAddedProduct: function() {
       this.productAdded+= 1
       alert('Product added to cart.');

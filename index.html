@@ -25,10 +25,12 @@
 
         <!-- navbar -->
         <nav class="navbar">
+          <!-- logo header -->
           <div class="academy">
             <img src="img/landing-slider-1-logo.png" alt="">
             <div class="name-academy"><a href="#">iAcademy</a></div>
           </div>
+          <!-- /logo header -->
 
           <div class="navbar-menu">
             <div v-for="element in menuNav" class="menu-element">
@@ -322,11 +324,15 @@
           <!-- top left footer -->
           <section class="left">
             <div class="section motto">
+              <!-- logo footer -->
               <div class="academy">
                 <img src="img/landing-slider-1-logo.png" alt="">
                 <div class="name-academy"><a href="#">iAcademy</a></div>
               </div>
-              <small>Providing Life Changing <br> Experience Through <br> Education. Class That Fit Your <br> Busy Life. Closer to Home.</small>
+              <!-- /logo footer -->
+              <small>
+                Providing Life Changing <br> Experience Through <br> Education. Class That Fit Your <br> Busy Life. Closer to Home.
+              </small>
               <div class="telephone">
                 <i class="fas fa-phone-alt"></i>
                 <small>1-677-124-44227</small>
@@ -340,8 +346,8 @@
 
             <div class="section popular">
               <h3>Popular Courses</h3>
-              <div v-for="(element, index) in popularCourses[1].arrayCourses" class="course">
-                <div class="name">
+              <div v-for="(element, index) in popularCourses[coursesIDX].arrayCourses" class="course">
+                <div class="name-course">
                   <a href="#">{{element.name}}</a>
                 </div>
 
