@@ -9,15 +9,15 @@
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 .min-width {
   min-width: 1000px;
 }
 
-a:hover {
-  color: #3db6ec;
+.container {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 /*/classi utility*/
@@ -35,13 +35,17 @@ a:hover {
   filter: brightness(60%);
 }
 .my-header .container {
-  width: 1000px;
-  margin: 0 auto;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   height: 750px;
+}
+.my-header .container a {
+  color: #fff;
+}
+.my-header .container a:hover {
+  color: #3db6ec;
 }
 .my-header .container .navbar {
   display: flex;
@@ -72,11 +76,14 @@ a:hover {
   font-weight: bold;
   font-size: 30px;
 }
-.my-header .container .navbar .academy:hover > .name-academy {
+.my-header .container .navbar .academy .name-academy a {
+  color: #fff;
+}
+.my-header .container .navbar .academy:hover a {
   color: #57657a;
   text-decoration: underline;
-  -webkit-text-decoration-color: #dab866;
-          text-decoration-color: #dab866;
+  -webkit-text-decoration-color: #ffd740;
+          text-decoration-color: #ffd740;
 }
 .my-header .container .navbar-menu {
   display: flex;
@@ -98,6 +105,10 @@ a:hover {
   width: 100px;
   color: #f6f5f4;
   justify-content: space-around;
+}
+.my-header .container .navbar-icons i:hover {
+  cursor: pointer;
+  color: #3db6ec;
 }
 .my-header .container .navbar-icons .product-added {
   position: absolute;
@@ -156,7 +167,7 @@ a:hover {
   left: 50%;
   top: 85%;
   width: 100px;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.4);
 }
 .my-header .container .box-circle i {
   padding: 3px;
@@ -170,8 +181,6 @@ a:hover {
 }
 
 .my-main section.avalaible-courses .container {
-  width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -185,6 +194,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   font-family: "PT Serif", serif;
+  font-weight: bold;
   height: 200px;
   width: 150px;
 }
@@ -192,16 +202,17 @@ a:hover {
   margin-bottom: 20px;
   width: 60px;
 }
+.my-main section.avalaible-courses .container .single-course a {
+  color: #8b8383;
+}
 .my-main section.avalaible-courses .container .single-course:hover {
   cursor: pointer;
   background-color: #f2f8fc;
 }
 .my-main section.trusted-name {
-  border-bottom: 1px solid #ccc;
+  border-bottom: solid 1px #cecece;
 }
 .my-main section.trusted-name .container {
-  width: 1000px;
-  margin: 0 auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -220,14 +231,15 @@ a:hover {
   font-family: "Roboto", sans-serif;
   color: #9c9c9c;
 }
-.my-main section.trusted-name .container span {
-  color: #52c9ff;
+.my-main section.trusted-name .container span a {
+  color: #045d8c;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
+.my-main section.trusted-name .container span:hover a {
+  color: #3db6ec;
+}
 .my-main section.empowering-children .container {
-  width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -278,7 +290,7 @@ a:hover {
   align-items: flex-start;
   height: 100px;
   justify-content: space-between;
-  color: #3db6ec;
+  color: #045d8c;
 }
 .my-main section.empowering-children .container .text .numbers .box-numbers span:first-child {
   font-size: 50px;
@@ -332,7 +344,7 @@ a:hover {
   align-items: center;
   width: 70px;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.4);
 }
 .my-main section.student-review .review-box .box-circle i.active {
   color: #fff;
@@ -342,11 +354,9 @@ a:hover {
   cursor: pointer;
 }
 .my-main section.learning-possibilities {
-  border-bottom: 1px solid #ccc;
+  border-bottom: solid 1px #cecece;
 }
 .my-main section.learning-possibilities .container {
-  width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -366,15 +376,15 @@ a:hover {
   color: #8b8383;
   font-weight: bold;
   height: calc(100% / 6);
-  border: solid #cecece 1px;
+  border: solid 1px #cecece;
   padding-left: 20px;
 }
 .my-main section.learning-possibilities .container .possibilities-choice .choice.selected {
-  border-left: 8px solid #3db6ec;
+  border-left: 8px solid #045d8c;
   background-color: #f2f8fc;
 }
 .my-main section.learning-possibilities .container .possibilities-choice .choice:hover {
-  border-left: 8px solid #3db6ec;
+  border-left: 8px solid #045d8c;
   background-color: #f2f8fc;
   cursor: pointer;
 }
@@ -402,7 +412,7 @@ a:hover {
   content: "";
   margin-right: 10px;
   font-weight: 900;
-  color: #3db6ec;
+  color: #045d8c;
   font-size: 70%;
   font-family: "Font Awesome 5 Free";
 }
@@ -424,12 +434,10 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: solid 1px #cecece;
   background-image: url("../img/page-background-img.png");
 }
 .my-main section.popular-courses .container {
-  width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -478,13 +486,19 @@ a:hover {
   width: 100%;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso .info {
-  background-color: #fff;
-  padding: 0 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  background-color: #fff;
+  padding: 0 5px;
   height: 50%;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info a {
+  color: #9c9c9c;
+}
+.my-main section.popular-courses .container .slider-container .blocco-corso .info a:hover {
+  color: #3db6ec;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso .info .info-course.one {
   display: flex;
@@ -501,11 +515,12 @@ a:hover {
   font-weight: lighter;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso .info .info-course.one .price {
-  background-color: #40c4ff;
+  background-color: #045d8c;
   color: #fff;
   text-align: center;
   width: 50px;
   border-radius: 20px;
+  padding: 5px;
 }
 .my-main section.popular-courses .container .slider-container .blocco-corso .info .info-course.one .price.free {
   background-color: #ffd740;
@@ -529,15 +544,15 @@ a:hover {
 }
 .my-main section.popular-courses .container .box-circle i {
   padding: 5px;
-  font-size: 10px;
-  color: #9ce0ff;
+  font-size: 15px;
+  color: #d6f2ff;
 }
 .my-main section.popular-courses .container .box-circle i.active {
-  color: #3db6ec;
+  color: #045d8c;
 }
 .my-main section.popular-courses .container .box-circle i:hover {
   cursor: pointer;
-  color: #3db6ec;
+  color: #045d8c;
 }
 .my-main section.pricing-plan {
   height: 1100px;
@@ -548,8 +563,6 @@ a:hover {
   align-items: center;
 }
 .my-main section.pricing-plan .container {
-  width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -569,11 +582,15 @@ a:hover {
   top: 30%;
   width: 50px;
   height: 50px;
-  box-shadow: 5px 10px 18px #888888;
+  box-shadow: 5px 8px 18px #8b8383;
   text-align: center;
 }
 .my-main section.pricing-plan .container .cart-button img {
   width: 50%;
+}
+.my-main section.pricing-plan .container .cart-button.circle {
+  background-color: #ee2852;
+  top: 23%;
 }
 .my-main section.pricing-plan .container .cart-button:hover {
   cursor: pointer;
@@ -588,6 +605,7 @@ a:hover {
 .my-main section.pricing-plan .container .intestazione p {
   padding: 30px 0;
   line-height: 1.5;
+  margin-bottom: 30px;
   width: 1000px;
   font-family: "Roboto", sans-serif;
   color: #9c9c9c;
@@ -659,7 +677,7 @@ a:hover {
   border-bottom: solid 1px #cecece;
 }
 .my-main section.pricing-plan .container .table .value i.fa-check {
-  color: #3db6ec;
+  color: #045d8c;
 }
 .my-main section.pricing-plan .container .table .value i.fa-times {
   color: #8b8383;
@@ -704,8 +722,6 @@ a:hover {
   height: 200px;
 }
 .my-main section.partner-logo .container {
-  width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -723,8 +739,6 @@ a:hover {
   background: #000;
 }
 .my-footer .container {
-  width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -745,10 +759,10 @@ a:hover {
   align-items: flex-start;
   width: 100%;
   height: 50%;
-  border-bottom: solid #fff 1px;
+  border-bottom: solid #8b8383 1px;
 }
 .my-footer .container section.top h3 {
-  font-size: 25px;
+  font-size: 30px;
   font-family: "PT Serif", serif;
   color: #fff;
 }
@@ -796,11 +810,14 @@ a:hover {
   font-weight: bold;
   font-size: 25px;
 }
-.my-footer .container section.top section.left .motto .academy:hover > a {
+.my-footer .container section.top section.left .motto .academy .name-academy a {
+  color: #fff;
+}
+.my-footer .container section.top section.left .motto .academy:hover a {
   color: #57657a;
   text-decoration: underline;
-  -webkit-text-decoration-color: #dab866;
-          text-decoration-color: #dab866;
+  -webkit-text-decoration-color: #ffd740;
+          text-decoration-color: #ffd740;
 }
 .my-footer .container section.top section.right {
   display: flex;

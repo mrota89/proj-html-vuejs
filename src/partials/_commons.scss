@@ -3,6 +3,18 @@
   margin: 0 auto;
 }
 
+@mixin logo-academy {
+  color: $white;
+  font-family: $font-title;
+  font-weight: bold;
+}
+
+@mixin logo-academy-hover {
+  color: $academy-logo-color;
+  text-decoration: underline;
+  text-decoration-color: $academy-underline-color;
+}
+
 @mixin background-image {
   background-size: contain;
   background-repeat: no-repeat;
@@ -84,7 +96,7 @@
 }
 
 @mixin learn-blue {
-  color: #52c9ff;
+  color: $azzurro-scuro;
   font-family: $font-paragraph;
   font-weight: bold;
 }
@@ -102,15 +114,23 @@ $trusted-name-image: "../img/h5-img-1.jpg";
 $student-opinion-bg: "../img/h5-parallax-img-1.png";
 
 $white: #fff;
+$red-cart: #ee2852;
 $nav-item:  #f6f5f4;
 $selected-link: #3db6ec;
 $paragraph-color: #9c9c9c;
 $dark-grey: #8b8383;
 $light-grey: #cecece;
+$grey: #ccc;
 $background-hover: #f2f8fc;
 $azzurro-scuro: #045d8c;
+$azzurro-leggero: #d6f2ff;
+$ultra-light-blue: #f7fdff;
+$academy-logo-color: #57657a;
+$academy-underline-color: #ffd740;
 $border-table: solid 1px $light-grey;
+$select-slider: rgba(256, 256, 256, 0.4);
 
+$header-height: 750px;
 $section-height-600: 600px;
 $min-width: 1000px;
 $width-menu-bar: 600px;

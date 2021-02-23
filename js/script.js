@@ -12,10 +12,10 @@ new Vue({
     menuNav:['HOME', 'COURSES', 'INSTRUCTORS', 'EVENTS', 'PAGES', 'ELEMENTS'],
     textJumbotron: [
       {
-        title: 'Conteporary Ideas',
+        title: 'Top Teacher',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        textButton: 'REGISTER NOW',
-        imgBg: '9',
+        textButton: 'MORE INFO',
+        imgBg: '10',
       },
       {
         title: 'Lesson Where You Want',
@@ -24,10 +24,10 @@ new Vue({
         imgBg: '4',
       },
       {
-        title: 'Top Teacher',
-        text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        textButton: 'MORE INFO',
-        imgBg: '10',
+        title: 'Contemporary Ideas',
+        text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        textButton: 'REGISTER NOW',
+        imgBg: '9',
       }
     ],
     courses: [
@@ -58,16 +58,16 @@ new Vue({
     ],
     studentsReview: [
       {
-        studentImg: '2',
-        review: `"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."`,
-        name: 'Joan Collins',
-        grade: 'STUDENT'
-      },
-      {
         studentImg: '4',
         review: `"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."`,
         name: 'Pina Sinalefe',
         grade: 'NEW GRADUATE'
+      },
+      {
+        studentImg: '2',
+        review: `"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."`,
+        name: 'Joan Collins',
+        grade: 'STUDENT'
       },
       {
         studentImg: '3',
@@ -159,38 +159,6 @@ new Vue({
       {
         arrayCourses: [
           {
-          img: '5',
-          name: 'Android Developer',
-          teacher: 'David Sanders',
-          price: 'FREE',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          placeAvailable: '1',
-          typeOfCourse: 'PROGRAMMING',
-          },
-          {
-            img: '6',
-            name: 'Web Designing',
-            teacher: 'Jennifer Powell',
-            price: 'FREE',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            placeAvailable: '1',
-            typeOfCourse: 'PROGRAMMING',
-          },
-          {
-            img: '12',
-            name: 'Financial Modelling',
-            teacher: 'David Sanders',
-            price: '$20',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            placeAvailable: '1',
-            typeOfCourse: 'BUSINESS',
-          }
-        ]
-      },
-
-      {
-        arrayCourses: [
-          {
             img: '2',
             name: 'Business English',
             teacher: 'Preston Marshall',
@@ -219,13 +187,43 @@ new Vue({
           }
         ]
       },
-
+      {
+        arrayCourses: [
+          {
+          img: '5',
+          name: 'Android Developer',
+          teacher: 'David Sanders',
+          price: 'FREE',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          placeAvailable: '1',
+          typeOfCourse: 'PROGRAMMING',
+          },
+          {
+            img: '6',
+            name: 'Web Designing',
+            teacher: 'Jennifer Powell',
+            price: 'FREE',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            placeAvailable: '1',
+            typeOfCourse: 'PROGRAMMING',
+          },
+          {
+            img: '12',
+            name: 'Financial Modelling',
+            teacher: 'Edward Bowman',
+            price: '$20',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            placeAvailable: '1',
+            typeOfCourse: 'BUSINESS',
+          }
+        ]
+      },
       {
         arrayCourses: [
           {
             img: '1',
             name: 'Basic Marketing',
-            teacher: 'Edward Woodman',
+            teacher: 'Edward Bowman',
             price: '20$',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             placeAvailable: '1',

@@ -14,7 +14,8 @@
 
 <body>
   <div id="app">
-    <header class="my-header min-width" @mouseover="buttonTopVisibility = false"  @mouseleave="buttonTopVisibility = true">
+    <header class="my-header min-width" @mouseover="buttonTopVisibility = false"
+    @mouseleave="buttonTopVisibility = true">
 
       <div class="jumbo-img-box">
         <img :src="imageJumbo()" alt="">
@@ -26,7 +27,7 @@
 
           <div class="academy">
             <img src="img/landing-slider-1-logo.png" alt="">
-            <div class="name-academy">iAcademy</div>
+            <div class="name-academy"><a href="#">iAcademy</a></div>
           </div>
 
           <div class="navbar-menu">
@@ -35,9 +36,9 @@
             </div>
           </div>
           <div class="navbar-icons">
-            <a href="#"><i class="fas fa-search"></i></a>
+            <i class="fas fa-search"></i>
             <a href="#"><i class="fas fa-shopping-bag"></i></a>
-            <a href="#"><i class="fas fa-bars"></i></a>
+            <i class="fas fa-bars"></i>
             <div class="product-added">{{productAdded}}</div>
           </div>
         </nav>
@@ -63,7 +64,7 @@
         <div class="container">
           <div v-for="(element, index) in courses" class="single-course">
             <img :src="imageCourse(index)" alt="">
-            <span>{{element.name}}</span>
+            <span><a href="#">{{element.name}}</a></span>
           </div>
         </div>
       </section>
@@ -74,7 +75,7 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
-          <a href="#"><span>LEARN MORE</span></a>
+          <span><a href="#">LEARN MORE</a></span>
         </div>
       </section>
 
@@ -171,8 +172,8 @@
               <div class="info">
                 <div class="info-course one">
                   <div class="course-title">
-                    <div class="name-course">{{element.name}}</div>
-                    <small class="teacher">{{element.teacher}}</small>
+                    <div class="name-course"><a href="#">{{element.name}}</a></div>
+                    <small class="teacher"><a href="#">{{element.teacher}}</a></small>
                   </div>
 
                   <div v-if="element.price === 'FREE'" class="price free">{{element.price}}</div>
@@ -187,7 +188,7 @@
                   <i class="fas fa-user"></i>
                   <span>{{element.placeAvailable}}</span>
                   <i class="fas fa-tag"></i>
-                  <span>{{element.typeOfCourse}}</span>
+                  <span><a href="#">{{element.typeOfCourse}}</a></span>
                 </div>
               </div>
             </div>
@@ -205,6 +206,12 @@
           <div v-if="cartVisibility === true" class="cart-button">
             <a href="#">
               <img src="img/cart.svg" alt="">
+            </a>
+          </div>
+
+          <div v-if="cartVisibility === true" class="cart-button circle">
+            <a href="#">
+              <img src="img/circle-cart.svg" alt="">
             </a>
           </div>
           <div class="intestazione">
@@ -279,7 +286,7 @@
             <div class="section motto">
               <div class="academy">
                 <img src="img/landing-slider-1-logo.png" alt="">
-                <a href="#"><div class="name-academy">iAcademy</div></a>
+                <div class="name-academy"><a href="#">iAcademy</a></div>
               </div>
               <small>Providing Life Changing <br> Experience Through <br> Education. Class That Fit Your <br> Busy Life. Closer to Home.</small>
               <div class="telephone">

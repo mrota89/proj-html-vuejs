@@ -9,22 +9,21 @@
 
 a {
   text-decoration: none;
-  color: $white;
 }
 
 .min-width {
   min-width: $min-width;
 }
 
-a:hover {
-  color: $selected-link;
+.container {
+  @include inner-container;
 }
 
 /*/classi utility*/
 
 .my-header {
   position: relative;
-  height: 750px;
+  height: $header-height;
   overflow: hidden;
 
   .jumbo-img-box {
@@ -38,9 +37,15 @@ a:hover {
   }
 
   .container {
-    @include inner-container;
     @include absolute;
-    height: 750px;
+    height: $header-height;
+
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: $selected-link;
+    }
 
     .navbar {
       @include flex-row;
@@ -63,17 +68,17 @@ a:hover {
         }
 
         .name-academy {
-          color: $white;
-          font-family: $font-title;
-          font-weight: bold;
+          @include logo-academy;
           font-size: 30px;
+
+          a {
+            color: $white;
+          }
         }
       }
 
-      .academy:hover > .name-academy {
-        color: #57657a;
-        text-decoration: underline;
-        text-decoration-color: #dab866;
+      .academy:hover a {
+        @include logo-academy-hover;
       }
 
       &-menu {
@@ -95,6 +100,11 @@ a:hover {
         width: $width-box-icons;
         color: $nav-item;
         justify-content: space-around;
+
+        i:hover {
+          cursor: pointer;
+          color: $selected-link;
+        }
 
         .product-added {
           @include absolute;
@@ -143,7 +153,7 @@ a:hover {
       @include absolute;
       top: 85%;
       width: 100px;
-      color: rgba(0, 0, 0, 0.2);
+      color: $select-slider;
 
       i {
         padding: 3px;
@@ -165,7 +175,6 @@ a:hover {
 
   section.avalaible-courses {
     .container {
-      @include inner-container;
       @include flex-row ;
       @include flex-start-around;
       padding-top: 50px;
@@ -175,12 +184,17 @@ a:hover {
         @include flex-column;
         @include flex-center;
         font-family: $font-title;
+        font-weight: bold;
         height: 200px;
         width: 150px;
 
         img {
           margin-bottom: 20px;
           width: 60px;
+        }
+
+        a {
+          color: $dark-grey;
         }
       }
 
@@ -192,10 +206,9 @@ a:hover {
   }
 
   section.trusted-name {
-    border-bottom: 1px solid #ccc;
+    border-bottom: $border-table;
 
     .container {
-      @include inner-container;
       @include background-image;
       background-image: url($trusted-name-image);
       text-align: left;
@@ -213,15 +226,18 @@ a:hover {
         color: $paragraph-color;
       }
 
-      span {
+      span a {
         @include learn-blue;
+      }
+
+      span:hover a {
+        color: $selected-link;
       }
     }
   }
 
   section.empowering-children {
     .container {
-      @include inner-container;
       @include flex-row;
       @include flex-end-center;
       position: relative;
@@ -269,7 +285,7 @@ a:hover {
             align-items: flex-start;
             height: 100px;
             justify-content: space-between;
-            color: $selected-link;
+            color: $azzurro-scuro;
 
             span:first-child {
               font-size: 50px;
@@ -323,7 +339,7 @@ a:hover {
         @include flex-center-around;
         width: 70px;
         font-size: 15px;
-        color: rgba(256, 256, 256, 0.2);
+        color: $select-slider;
 
         i.active {
           color: $white;
@@ -338,10 +354,9 @@ a:hover {
   }
 
   section.learning-possibilities {
-    border-bottom: 1px solid #ccc;
+    border-bottom: $border-table;
 
     .container {
-      @include inner-container;
       @include flex-row;
       @include flex-center-around;
       position:relative;
@@ -357,17 +372,17 @@ a:hover {
           color: $dark-grey;
           font-weight: bold;
           height: calc(100% / 6);
-          border: solid $light-grey 1px;
+          border: $border-table;
           padding-left: 20px;
         }
 
         .choice.selected {
-          border-left: 8px solid $selected-link;
+          border-left: 8px solid $azzurro-scuro;
           background-color: $background-hover;
         }
 
         .choice:hover {
-          border-left: 8px solid $selected-link;
+          border-left: 8px solid $azzurro-scuro;
           background-color: $background-hover;
           cursor: pointer;
         }
@@ -402,7 +417,7 @@ a:hover {
             content: "\f00c";
             margin-right: 10px;
             font-weight: 900;
-            color: $selected-link;
+            color: $azzurro-scuro;
             font-size: 70%;
             font-family: "Font Awesome 5 Free";
           }
@@ -426,11 +441,10 @@ a:hover {
     height: 1000px;
     @include flex-row;
     @include flex-center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: $border-table;
     background-image: url("../img/page-background-img.png");
 
     .container {
-      @include inner-container;
       @include flex-column;
       @include flex-center-around;
       height: 80%;
@@ -478,11 +492,19 @@ a:hover {
           }
 
           .info {
-            background-color: $white;
-            padding: 0 5px;
             @include flex-column;
             @include flex-start-around;
+            background-color: $white;
+            padding: 0 5px;
             height: 50%;
+
+            a {
+              color: $paragraph-color;
+            }
+
+            a:hover {
+              color: $selected-link;
+            }
 
             .info-course.one {
               @include flex-row;
@@ -499,15 +521,16 @@ a:hover {
               }
 
               .price {
-                background-color: #40c4ff;
+                background-color: $azzurro-scuro;
                 color: $white;
                 text-align: center;
                 width: 50px;
                 border-radius: 20px;
+                padding: 5px;
               }
 
               .price.free {
-                background-color: #ffd740;
+                background-color: $academy-underline-color;
               }
             }
 
@@ -536,17 +559,17 @@ a:hover {
 
         i {
           padding: 5px;
-          font-size: 10px;
-          color: #9ce0ff;
+          font-size: 15px;
+          color: $azzurro-leggero;
         }
 
         i.active {
-          color: $selected-link;
+          color: $azzurro-scuro;
         }
 
         i:hover {
           cursor: pointer;
-          color: $selected-link;
+          color: $azzurro-scuro;
         }
 
       }
@@ -560,7 +583,6 @@ a:hover {
     @include flex-center;
 
     .container {
-      @include inner-container;
       @include flex-column;
       @include flex-center-around;
       position: relative;
@@ -573,12 +595,17 @@ a:hover {
         top: 30%;
         width: 50px;
         height: 50px;
-        box-shadow: 5px 10px 18px #888888;
+        box-shadow: 5px 8px 18px $dark-grey;
         text-align: center;
 
         img {
           width: 50%;
         }
+      }
+
+      .cart-button.circle {
+        background-color: $red-cart;
+        top: 23%;
       }
 
       .cart-button:hover {
@@ -595,6 +622,7 @@ a:hover {
         p {
           padding: 30px 0;
           line-height: 1.5;
+          margin-bottom: 30px;
           width: 1000px;
           font-family: $font-paragraph;
           color: $paragraph-color;
@@ -608,7 +636,7 @@ a:hover {
 
         .column-property, .column-products {
           width: (100% / 4);
-          border-top: 5px solid #d6f2ff;
+          border-top: 5px solid $azzurro-leggero;
         }
 
         .column-products.active {
@@ -653,7 +681,7 @@ a:hover {
 
         .top {
           text-align: center;
-          background: #f7fdff;
+          background: $ultra-light-blue;
 
           .price {
             font-size: 20px;
@@ -670,7 +698,7 @@ a:hover {
           border-bottom: $border-table;
 
           i.fa-check {
-            color: $selected-link;
+            color: $azzurro-scuro;
           }
 
           i.fa-times {
@@ -682,7 +710,7 @@ a:hover {
           @include flex-row;
           @include flex-center;
           height: 100px;
-          background: #f7fdff;
+          background: $ultra-light-blue;
 
           &-button {
             @include white-button;
@@ -713,7 +741,6 @@ a:hover {
     height: 200px;
 
     .container {
-      @include inner-container;
       @include flex-row;
       @include flex-center;
 
@@ -733,7 +760,6 @@ a:hover {
   background: #000;
 
   .container {
-    @include inner-container;
     @include flex-column;
     @include flex-end-center;
     height: 100%;
@@ -752,15 +778,13 @@ a:hover {
     @include flex-start-around;
     width: 100%;
     height: 50%;
-    border-bottom: solid $white 1px ;
+    border-bottom: solid $dark-grey 1px ;
 
       h3 {
-        font-size: 25px;
+        font-size: 30px;
         font-family: $font-title;
         color: $white;
       }
-
-
 
       section.left {
         @include flex-row;
@@ -801,17 +825,17 @@ a:hover {
             }
 
             .name-academy {
-              color: $white;
-              font-family: $font-title;
-              font-weight: bold;
+              @include logo-academy;
               font-size: 25px;
+
+              a {
+                color: $white;
+              }
             }
           }
 
-          .academy:hover > a {
-            color: #57657a;
-            text-decoration: underline;
-            text-decoration-color: #dab866;
+          .academy:hover a {
+            @include logo-academy-hover;
           }
         }
       }
@@ -844,7 +868,6 @@ a:hover {
         @include between-center;
         width: 40%
       }
-
     }
   }
 }
