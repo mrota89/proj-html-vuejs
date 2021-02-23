@@ -23,8 +23,8 @@
 
       <div class="container">
 
+        <!-- navbar -->
         <nav class="navbar">
-
           <div class="academy">
             <img src="img/landing-slider-1-logo.png" alt="">
             <div class="name-academy"><a href="#">iAcademy</a></div>
@@ -42,7 +42,9 @@
             <div class="product-added">{{productAdded}}</div>
           </div>
         </nav>
+        <!-- /navbar -->
 
+        <!-- testo jumbotron -->
         <div v-for="(element, index) in textJumbotron" v-if="index === jumboIDX" class="jumbotron-text">
           <h1>{{element.title}}</h1>
           <p>
@@ -52,15 +54,21 @@
             <a href="#">{{element.textButton}}</a>
           </div>
         </div>
+        <!-- /testo jumbotron -->
 
         <div class="box-circle">
-          <i v-for="(element, index) in textJumbotron" @click="jumboIDX = index" :class="coloraPallino(index, jumboIDX)"></i>
+          <i v-for="(element, index) in textJumbotron" @click="jumboIDX = index"
+          :class="coloraPallino(index, jumboIDX)"></i>
         </div>
       </div>
     </header>
 
     <main class="my-main">
-      <section class="avalaible-courses min-width" @mouseover="buttonTopVisibility = false" @mouseleave="buttonTopVisibility = true">
+
+      <!-- sezione icone corsi -->
+      <section class="avalaible-courses min-width" @mouseover="buttonTopVisibility = false"
+      @mouseleave="buttonTopVisibility = true">
+
         <div class="container">
           <div v-for="(element, index) in courses" class="single-course">
             <img :src="imageCourse(index)" alt="">
@@ -68,7 +76,9 @@
           </div>
         </div>
       </section>
+      <!-- /sezione icone corsi -->
 
+      <!-- sezione trusted name -->
       <section class="trusted-name min-width">
         <div class="container">
           <h2>The Trusted Name <br> for In-Home Tutoring.</h2>
@@ -78,7 +88,9 @@
           <span><a href="#">LEARN MORE</a></span>
         </div>
       </section>
+      <!-- /sezione trusted name -->
 
+      <!-- sezione empowering -->
       <section class="empowering-children min-width">
         <div class="container">
           <div class="children-hand-image">
@@ -103,7 +115,9 @@
           </div>
         </div>
       </section>
+      <!-- /sezione empowering -->
 
+      <!-- sezione student review -->
       <section class="student-review min-width">
         <div class="container">
           <div v-for="(element, index) in studentsReview" v-if="index === studentReviewIDX" class="review-box">
@@ -122,21 +136,25 @@
             </div>
 
             <div class="box-circle">
-              <i v-for="(element, index) in studentsReview" @click="studentReviewIDX = index" :class="coloraPallino(index, studentReviewIDX)"></i>
+              <i v-for="(element, index) in studentsReview" @click="studentReviewIDX = index"
+              :class="coloraPallino(index, studentReviewIDX)"></i>
             </div>
           </div>
         </div>
       </section>
+      <!-- /sezione student review -->
 
+      <!-- seziuone learning possibilities -->
       <section class="learning-possibilities min-width">
         <div class="container">
           <div class="possibilities-choice">
-            <div v-for="(choice, index) in possibilitiesChoices" @click="choiceLearningIDX = index" :class="classTab(index, choiceLearningIDX, 'choice selected', 'choice')">
+            <div v-for="(choice, index) in possibilitiesChoices" @click="choiceLearningIDX = index"
+            :class="classTab(index, choiceLearningIDX, 'choice selected', 'choice')">
               {{choice.tabName}}
             </div>
           </div>
 
-          <div v-for="(choice, index) in possibilitiesChoices" v-if="index === choiceLearningIDX" class="info-lerning">
+          <div class="info-lerning" v-for="(choice, index) in possibilitiesChoices" v-if="index === choiceLearningIDX">
 
             <h3>{{choice.title}}</h3>
             <p>
@@ -155,7 +173,9 @@
           </div>
         </div>
       </section>
+      <!-- /sezione learning possibilities -->
 
+      <!-- sezione popular courses -->
       <section class="popular-courses min-width">
         <div class="container">
           <div class="intestazione">
@@ -163,6 +183,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
 
+          <!-- slider container -->
           <div class="slider-container">
             <div v-for="(element, index) in popularCourses[coursesIDX].arrayCourses" class="blocco-corso">
               <div class="box-img">
@@ -193,16 +214,22 @@
               </div>
             </div>
           </div>
+          <!-- /slider container -->
 
           <div class="box-circle">
-            <i v-for="(element, index) in popularCourses" @click="coursesIDX = index" :class="coloraPallino(index, coursesIDX)"></i>
-
+            <i v-for="(element, index) in popularCourses" @click="coursesIDX = index"
+            :class="coloraPallino(index, coursesIDX)"></i>
           </div>
         </div>
       </section>
+      <!-- /sezione popular courses -->
 
-      <section @mouseover="cartVisibility = true" @mouseleave="cartVisibility = false" class="pricing-plan min-width">
+      <!-- sezione pricing plan -->
+      <section class="pricing-plan min-width" @mouseover="cartVisibility = true"
+      @mouseleave="cartVisibility = false">
         <div class="container">
+
+          <!-- pulsanti carrello -->
           <div v-if="cartVisibility === true" class="cart-button">
             <a href="#">
               <img src="img/cart.svg" alt="">
@@ -214,11 +241,14 @@
               <img src="img/circle-cart.svg" alt="">
             </a>
           </div>
+          <!-- /pulsanti carrello -->
+
           <div class="intestazione">
             <h2>Pricing Plans</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
 
+          <!-- tabella prezzi -->
           <div class="table">
             <div class="column-property">
               <strong class="save">
@@ -247,13 +277,16 @@
                 </div>
 
                 <div class="middle">
-                  <div v-for="(element, index) in pricingPlan[index].valueProperty" v-if="element !== false && element !== true" class="value">
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
+                  v-if="element !== false && element !== true" class="value">
                     {{element}}
                   </div>
-                  <div v-for="(element, index) in pricingPlan[index].valueProperty" v-if="element === true" class="value">
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
+                  v-if="element === true" class="value">
                     <i class="fas fa-check"></i>
                   </div>
-                  <div v-for="(element, index) in pricingPlan[index].valueProperty" v-if="element === false" class="value">
+                  <div v-for="(element, index) in pricingPlan[index].valueProperty"
+                  v-if="element === false" class="value">
                     <i class="fas fa-times"></i>
                   </div>
                 </div>
@@ -266,9 +299,10 @@
               </div>
             </div>
           </div>
-
+          <!-- /tabella prezzi -->
         </div>
       </section>
+      <!-- /sezione pricing plan -->
 
       <section class="partner-logo min-width">
         <div class="container">
@@ -279,9 +313,13 @@
       </section>
     </main>
 
-    <footer class="my-footer">
+    <footer class="my-footer min-width">
       <div class="container">
+
+        <!-- sezione top footer -->
         <section class="top">
+
+          <!-- top left footer -->
           <section class="left">
             <div class="section motto">
               <div class="academy">
@@ -320,7 +358,9 @@
               </small>
             </div>
           </section>
+          <!-- /top left footer -->
 
+          <!-- top right footer -->
           <section class="right">
             <h3>Flexible Learning</h3>
 
@@ -328,8 +368,11 @@
               <img src="img/footer-img-1.png" alt="">
             </div>
           </section>
+          <!-- /top right footer -->
         </section>
+        <!-- /sezione top footer -->
 
+        <!-- sezione bottom footer -->
         <section class="bottom">
           <small class="copyright">
             Copyrights 2017 ©Mikado Themes
@@ -343,10 +386,11 @@
             <a href="#"><i class="fab fa-facebook-f"></i></a>
           </div>
         </section>
-
+        <!-- /sezione bottom footer -->
       </div>
     </footer>
 
+    <!-- pulsante ritorno top pagina -->
     <div v-if="buttonTopVisibility === true" @click="topFunction" class="button-top">
       <i class="fas fa-angle-up"></i>
       <strong>TOP</strong>
